@@ -33,7 +33,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getStatusLabelAttribute()
+    public function getStatusLabelAttribute(): string
     {
         if ($this->isActive()) {
             return "<span class='badge badge-success'>" . __('labels.general.active') . '</span>';
@@ -45,7 +45,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getConfirmedLabelAttribute()
+    public function getConfirmedLabelAttribute(): string
     {
         if ($this->isConfirmed()) {
             if ($this->id != 1 && $this->id != auth()->id()) {
@@ -64,12 +64,12 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getRolesLabelAttribute()
+    public function getRolesLabelAttribute(): string
     {
         $roles = $this->getRoleNames()->toArray();
 
         if (\count($roles)) {
-            return implode(', ', array_map(function ($item) {
+            return implode(', ', array_map(function ($item): string {
                 return ucwords($item);
             }, $roles));
         }
@@ -80,12 +80,12 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getPermissionsLabelAttribute()
+    public function getPermissionsLabelAttribute(): string
     {
         $permissions = $this->getDirectPermissions()->toArray();
 
         if (\count($permissions)) {
-            return implode(', ', array_map(function ($item) {
+            return implode(', ', array_map(function ($item): string {
                 return ucwords($item['name']);
             }, $permissions));
         }
@@ -139,17 +139,18 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getLoginAsButtonAttribute()
+    public function getLoginAsButtonAttribute(): string
     {
         // If the admin is currently NOT spoofing a user
-        if (! session()->has('admin_user_id') || ! session()->has('temp_user_id')) {
-            //Won't break, but don't let them "Login As" themselves
-            if ($this->id != auth()->id()) {
-                return '<a href="' . route(
-                    'admin.auth.user.login-as',
-                    $this
-                ) . '" class="dropdown-item">' . __('buttons.backend.access.users.login_as', ['user' => e($this->full_name)]) . '</a> ';
-            }
+        if (!(! session()->has('admin_user_id') || ! session()->has('temp_user_id'))) {
+            return '';
+        }
+        //Won't break, but don't let them "Login As" themselves
+        if ($this->id != auth()->id()) {
+            return '<a href="' . route(
+                'admin.auth.user.login-as',
+                $this
+            ) . '" class="dropdown-item">' . __('buttons.backend.access.users.login_as', ['user' => e($this->full_name)]) . '</a> ';
         }
 
         return '';
@@ -158,23 +159,25 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getClearSessionButtonAttribute()
+    public function getClearSessionButtonAttribute(): string
     {
-        if ($this->id != auth()->id() && config('session.driver') == 'database') {
-            return '<a href="' . route('admin.auth.user.clear-session', $this) . '"
+        if ($this->id == auth()->id()) {
+            return '';
+        }
+        if (config('session.driver') != 'database') {
+            return '';
+        }
+        return '<a href="' . route('admin.auth.user.clear-session', $this) . '"
 			 	 data-trans-button-cancel="' . __('buttons.general.cancel') . '"
                  data-trans-button-confirm="' . __('buttons.general.continue') . '"
                  data-trans-title="' . __('strings.backend.general.are_you_sure') . '"
                  class="dropdown-item" name="confirm_item">' . __('buttons.backend.access.users.clear_session') . '</a> ';
-        }
-
-        return '';
     }
 
     /**
      * @return string
      */
-    public function getShowButtonAttribute()
+    public function getShowButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.show', $this) . '" data-toggle="tooltip" data-placement="top" title="' . __('buttons.general.crud.view') . '" class="btn btn-info"><i class="fas fa-eye"></i></a>';
     }
@@ -182,7 +185,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getEditButtonAttribute()
+    public function getEditButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.edit', $this) . '" data-toggle="tooltip" data-placement="top" title="' . __('buttons.general.crud.edit') . '" class="btn btn-primary"><i class="fas fa-edit"></i></a>';
     }
@@ -190,7 +193,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getChangePasswordButtonAttribute()
+    public function getChangePasswordButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.change-password', $this) . '" class="dropdown-item">' . __('buttons.backend.access.users.change_password') . '</a> ';
     }
@@ -198,7 +201,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getStatusButtonAttribute()
+    public function getStatusButtonAttribute(): string
     {
         if ($this->id != auth()->id()) {
             switch ($this->active) {
@@ -225,36 +228,40 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getConfirmedButtonAttribute()
+    public function getConfirmedButtonAttribute(): string
     {
-        if (! $this->isConfirmed() && ! config('access.users.requires_approval')) {
-            return '<a href="' . route('admin.auth.user.account.confirm.resend', $this) . '" class="dropdown-item">' . __('buttons.backend.access.users.resend_email') . '</a> ';
+        if ($this->isConfirmed()) {
+            return '';
         }
-
-        return '';
+        if (config('access.users.requires_approval')) {
+            return '';
+        }
+        return '<a href="' . route('admin.auth.user.account.confirm.resend', $this) . '" class="dropdown-item">' . __('buttons.backend.access.users.resend_email') . '</a> ';
     }
 
     /**
      * @return string
      */
-    public function getDeleteButtonAttribute()
+    public function getDeleteButtonAttribute(): string
     {
-        if ($this->id != auth()->id() && $this->id != 1) {
-            return '<a href="' . route('admin.auth.user.destroy', $this) . '"
+        if ($this->id == auth()->id()) {
+            return '';
+        }
+        if ($this->id == 1) {
+            return '';
+        }
+        return '<a href="' . route('admin.auth.user.destroy', $this) . '"
                  data-method="delete"
                  data-trans-button-cancel="' . __('buttons.general.cancel') . '"
                  data-trans-button-confirm="' . __('buttons.general.crud.delete') . '"
                  data-trans-title="' . __('strings.backend.general.are_you_sure') . '"
                  class="dropdown-item">' . __('buttons.general.crud.delete') . '</a> ';
-        }
-
-        return '';
     }
 
     /**
      * @return string
      */
-    public function getDeletePermanentlyButtonAttribute()
+    public function getDeletePermanentlyButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.delete-permanently', $this) . '" name="confirm_item" class="btn btn-danger"><i class="fas fa-trash" data-toggle="tooltip" data-placement="top" title="' . __('buttons.backend.access.users.delete_permanently') . '"></i></a> ';
     }
@@ -262,7 +269,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getRestoreButtonAttribute()
+    public function getRestoreButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.restore', $this) . '" name="confirm_item" class="btn btn-info"><i class="fas fa-refresh" data-toggle="tooltip" data-placement="top" title="' . __('buttons.backend.access.users.restore_user') . '"></i></a> ';
     }
@@ -270,7 +277,7 @@ trait UserAttribute
     /**
      * @return string
      */
-    public function getActionButtonsAttribute()
+    public function getActionButtonsAttribute(): string
     {
         if ($this->trashed()) {
             return '

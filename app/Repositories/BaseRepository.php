@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Repositories;
 
+use Illuminate\Database\Eloquent\Builder;
+use Exception;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use App\Exceptions\GeneralException;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -16,14 +19,14 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * The repository model.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var Model
      */
     protected $model;
 
     /**
      * The query builder.
      *
-     * @var \Illuminate\Database\Eloquent\Builder
+     * @var Builder
      */
     protected $query;
 
@@ -133,7 +136,7 @@ abstract class BaseRepository implements RepositoryContract
      *
      * @param array $data
      *
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return Model
      */
     public function create(array $data)
     {
@@ -147,7 +150,7 @@ abstract class BaseRepository implements RepositoryContract
      *
      * @param array $data
      *
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return Collection
      */
     public function createMultiple(array $data)
     {
@@ -183,7 +186,7 @@ abstract class BaseRepository implements RepositoryContract
      *
      * @return bool|null
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function deleteById($id): bool
     {
@@ -279,7 +282,7 @@ abstract class BaseRepository implements RepositoryContract
      * @param string $pageName
      * @param null   $page
      *
-     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     * @return LengthAwarePaginator
      */
     public function paginate($limit = 25, array $columns = ['*'], $pageName = 'page', $page = null)
     {

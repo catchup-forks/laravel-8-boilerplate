@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use Illuminate\Pagination\AbstractPaginator;
+use Illuminate\Foundation\AliasLoader;
+use Barryvdh\Debugbar\Facade;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -54,8 +57,8 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         // Set the default template for Pagination to use the included Bootstrap 4 template
-        \Illuminate\Pagination\AbstractPaginator::defaultView('pagination::bootstrap-4');
-        \Illuminate\Pagination\AbstractPaginator::defaultSimpleView('pagination::simple-bootstrap-4');
+        AbstractPaginator::defaultView('pagination::bootstrap-4');
+        AbstractPaginator::defaultSimpleView('pagination::simple-bootstrap-4');
     }
 
     /**
@@ -70,10 +73,10 @@ class AppServiceProvider extends ServiceProvider
             /**
              * Loader for registering facades.
              */
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+            $loader = AliasLoader::getInstance();
 
             // Load third party local aliases
-            $loader->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
+            $loader->alias('Debugbar', Facade::class);
         }
     }
 }

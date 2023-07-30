@@ -12,7 +12,7 @@ trait RoleAttribute
     /**
      * @return string
      */
-    public function getEditButtonAttribute()
+    public function getEditButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.role.edit', $this) . '" class="btn btn-primary"><i class="fas fa-edit" data-toggle="tooltip" data-placement="top" title="' . __('buttons.general.crud.edit') . '"></i></a>';
     }
@@ -20,7 +20,7 @@ trait RoleAttribute
     /**
      * @return string
      */
-    public function getDeleteButtonAttribute()
+    public function getDeleteButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.role.destroy', $this) . '"
 			 data-method="delete"
@@ -33,7 +33,7 @@ trait RoleAttribute
     /**
      * @return string
      */
-    public function getActionButtonsAttribute()
+    public function getActionButtonsAttribute(): string
     {
         if ($this->id == 1) {
             return 'N/A';

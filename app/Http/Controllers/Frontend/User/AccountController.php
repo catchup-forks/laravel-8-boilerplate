@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\User;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 
 /**
@@ -12,7 +14,7 @@ use App\Http\Controllers\Controller;
 class AccountController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function index()
     {

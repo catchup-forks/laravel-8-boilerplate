@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Contracts\Auth\CanResetPassword;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\Auth\ResetPasswordRequest;
 use App\Repositories\Frontend\Auth\UserRepository;
@@ -19,10 +23,7 @@ class ResetPasswordController extends Controller
 {
     use ResetsPasswords;
 
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * ChangePasswordController constructor.
@@ -41,7 +42,7 @@ class ResetPasswordController extends Controller
      *
      * @param string|null $token
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function showResetForm($token = null)
     {
@@ -50,15 +51,17 @@ class ResetPasswordController extends Controller
         }
 
         $user = $this->userRepository->findByPasswordResetToken($token);
-
-        if ($user && app()->make('auth.password.broker')->tokenExists($user, $token)) {
-            return view('frontend.auth.passwords.reset')
-                ->withToken($token)
-                ->withEmail($user->email);
+        if (!$user) {
+            return redirect()->route('frontend.auth.password.email')
+                ->withFlashDanger(__('exceptions.frontend.auth.password.reset_problem'));
         }
-
-        return redirect()->route('frontend.auth.password.email')
-            ->withFlashDanger(__('exceptions.frontend.auth.password.reset_problem'));
+        if (!app()->make('auth.password.broker')->tokenExists($user, $token)) {
+            return redirect()->route('frontend.auth.password.email')
+                ->withFlashDanger(__('exceptions.frontend.auth.password.reset_problem'));
+        }
+        return view('frontend.auth.passwords.reset')
+            ->withToken($token)
+            ->withEmail($user->email);
     }
 
     /**
@@ -66,7 +69,7 @@ class ResetPasswordController extends Controller
      *
      * @param ResetPasswordRequest $request
      *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     * @return RedirectResponse|JsonResponse
      */
     public function reset(ResetPasswordRequest $request)
     {
@@ -91,7 +94,7 @@ class ResetPasswordController extends Controller
     /**
      * Reset the given user's password.
      *
-     * @param \Illuminate\Contracts\Auth\CanResetPassword $user
+     * @param CanResetPassword $user
      * @param string                                      $password
      *
      * @return void
@@ -114,7 +117,7 @@ class ResetPasswordController extends Controller
      *
      * @param string $response
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
     protected function sendResetResponse($response)
     {

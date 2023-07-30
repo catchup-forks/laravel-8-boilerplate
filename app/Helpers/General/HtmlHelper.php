@@ -14,10 +14,8 @@ class HtmlHelper
 {
     /**
      * The URL generator instance.
-     *
-     * @var \Illuminate\Contracts\Routing\UrlGenerator
      */
-    protected $url;
+    protected ?UrlGenerator $url;
 
     /**
      * HtmlHelper constructor.
@@ -36,7 +34,7 @@ class HtmlHelper
      *
      * @return mixed
      */
-    public function style($url, $attributes = [], $secure = null)
+    public function style($url, array $attributes = [], $secure = null): HtmlString
     {
         $defaults = ['media' => 'all', 'type' => 'text/css', 'rel' => 'stylesheet'];
 
@@ -54,9 +52,9 @@ class HtmlHelper
      * @param array  $attributes
      * @param bool   $secure
      *
-     * @return \Illuminate\Support\HtmlString
+     * @return HtmlString
      */
-    public function script($url, $attributes = [], $secure = null)
+    public function script($url, array $attributes = [], $secure = null): HtmlString
     {
         $attributes['src'] = $this->url->asset($url, $secure);
 
@@ -93,7 +91,7 @@ class HtmlHelper
      *
      * @return string
      */
-    public function attributes($attributes)
+    public function attributes($attributes): string
     {
         $html = [];
 
@@ -142,9 +140,9 @@ class HtmlHelper
      *
      * @param $html
      *
-     * @return \Illuminate\Support\HtmlString
+     * @return HtmlString
      */
-    protected function toHtmlString($html)
+    protected function toHtmlString($html): HtmlString
     {
         return new HtmlString($html);
     }

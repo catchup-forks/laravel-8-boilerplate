@@ -41,45 +41,45 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([
         __DIR__ . '/app',
         //__DIR__ . '/bootstrap',
-        //__DIR__ . '/config',
+        __DIR__ . '/config',
         //__DIR__ . '/public_html',
         //__DIR__ . '/resources',
-        //__DIR__ . '/routes',
+        __DIR__ . '/routes',
         //__DIR__ . '/tests',
     ]);
 
     $rectorConfig->importNames(true);
     $rectorConfig->importShortClasses();
 
-    //$rectorConfig->parameters()->set(Option::REMOVE_UNUSED_IMPORTS, true); // don't import everything, only affected
+    $rectorConfig->parameters()->set(Option::REMOVE_UNUSED_IMPORTS, true); // don't import everything, only affected
 
     //$rectorConfig->rule(\Rector\Php80\Rector\Class_\);
 
     // register rules to add return type when known
     $rectorConfig->rules([
-        //AddParamTypeDeclarationRector::class,
-        //AddParamTypeFromPropertyTypeRector::class,
-//
-        //AddReturnTypeDeclarationBasedOnParentClassMethodRector::class,
-//
-        //AddVoidReturnTypeWhereNoReturnRector::class,
+        AddParamTypeDeclarationRector::class,
+        AddParamTypeFromPropertyTypeRector::class,
 
-        //BoolReturnTypeFromStrictScalarReturnsRector::class,
-//
+        AddReturnTypeDeclarationBasedOnParentClassMethodRector::class,
+
+        AddVoidReturnTypeWhereNoReturnRector::class,
+
+        BoolReturnTypeFromStrictScalarReturnsRector::class,
+
         //CallOnAppArrayAccessToStandaloneAssignRector::class,
-//
-        //ClassPropertyAssignToConstructorPromotionRector::class,
-//
+
+        ClassPropertyAssignToConstructorPromotionRector::class,
+
         //JsonThrowOnErrorRector::class,
 //
-        //ReturnTypeFromReturnDirectArrayRector::class,
-        //ReturnTypeFromReturnNewRector::class,
-        //ReturnTypeFromStrictBoolReturnExprRector::class,
-        //ReturnTypeFromStrictNativeCallRector::class,
-        //ReturnTypeFromStrictScalarReturnExprRector::class,
+        ReturnTypeFromReturnDirectArrayRector::class,
+        ReturnTypeFromReturnNewRector::class,
+        ReturnTypeFromStrictBoolReturnExprRector::class,
+        ReturnTypeFromStrictNativeCallRector::class,
+        ReturnTypeFromStrictScalarReturnExprRector::class,
 //
         SimplifyConditionsRector::class,
-        SimplifyForeachToArrayFilterRector::class,
+        //SimplifyForeachToArrayFilterRector::class,
         SimplifyForeachToCoalescingRector::class,
         SimplifyIfElseToTernaryRector::class,
         SimplifyUselessVariableRector::class,
@@ -102,7 +102,7 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::TYPE_DECLARATION,
         SetList::EARLY_RETURN,
         ////SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION,
-        //LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
+        LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
         //SetList::CODING_STYLE,
         //SetList::DEAD_CODE,
         //SetList::CODE_QUALITY,

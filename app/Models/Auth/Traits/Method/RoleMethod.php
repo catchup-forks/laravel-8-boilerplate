@@ -12,7 +12,7 @@ trait RoleMethod
     /**
      * @return mixed
      */
-    public function isAdmin()
+    public function isAdmin(): bool
     {
         return $this->name === config('access.users.admin_role');
     }

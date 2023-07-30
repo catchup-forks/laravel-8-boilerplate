@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Backend\Auth\User;
 
+use App\Exceptions\GeneralException;
+use Throwable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Auth\User\ManageUserRequest;
 use App\Models\Auth\User;
@@ -14,10 +16,7 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserStatusController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * @param UserRepository $userRepository
@@ -56,7 +55,7 @@ class UserStatusController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function mark(ManageUserRequest $request, User $user, $status)
     {
@@ -75,8 +74,8 @@ class UserStatusController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
-     * @throws \Throwable
+     * @throws GeneralException
+     * @throws Throwable
      */
     public function delete(ManageUserRequest $request, User $deletedUser)
     {
@@ -91,7 +90,7 @@ class UserStatusController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function restore(ManageUserRequest $request, User $deletedUser)
     {

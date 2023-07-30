@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Exceptions;
 
+use Illuminate\Http\Response;
 use Exception;
 use Throwable;
 
@@ -44,7 +45,7 @@ class GeneralException extends Exception
      *
      * @param  \Illuminate\Http\Request
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function render($request)
     {

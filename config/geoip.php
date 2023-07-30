@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+use Torann\GeoIP\Services\MaxMindDatabase;
+use Torann\GeoIP\Services\MaxMindWebService;
+use Torann\GeoIP\Services\IPApi;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -52,21 +56,21 @@ return [
 
     'services' => [
         'maxmind_database' => [
-            'class'         => \Torann\GeoIP\Services\MaxMindDatabase::class,
+            'class'         => MaxMindDatabase::class,
             'database_path' => storage_path('app/geoip.mmdb'),
             'update_url'    => 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz',
             'locales'       => ['en'],
         ],
 
         'maxmind_api' => [
-            'class'       => \Torann\GeoIP\Services\MaxMindWebService::class,
+            'class'       => MaxMindWebService::class,
             'user_id'     => env('MAXMIND_USER_ID'),
             'license_key' => env('MAXMIND_LICENSE_KEY'),
             'locales'     => ['en'],
         ],
 
         'ipapi' => [
-            'class'          => \Torann\GeoIP\Services\IPApi::class,
+            'class'          => IPApi::class,
             'secure'         => true,
             'key'            => env('IPAPI_KEY'),
             'continent_path' => storage_path('app/continents.json'),

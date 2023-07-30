@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
+use App\Exceptions\GeneralException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\User\UpdatePasswordRequest;
 use App\Repositories\Frontend\Auth\UserRepository;
@@ -14,7 +17,7 @@ use App\Repositories\Frontend\Auth\UserRepository;
 class PasswordExpiredController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function expired()
     {
@@ -27,7 +30,7 @@ class PasswordExpiredController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function update(UpdatePasswordRequest $request, UserRepository $userRepository)
     {

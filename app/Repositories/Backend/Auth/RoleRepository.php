@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repositories\Backend\Auth;
 
+use Illuminate\Database\Eloquent\Model;
 use App\Events\Backend\Auth\Role\RoleCreated;
 use App\Events\Backend\Auth\Role\RoleUpdated;
 use App\Exceptions\GeneralException;
@@ -19,7 +20,7 @@ class RoleRepository extends BaseRepository
     /**
      * @return string
      */
-    public function model()
+    public function model(): string
     {
         return Role::class;
     }
@@ -41,13 +42,39 @@ class RoleRepository extends BaseRepository
         if (! isset($data['permissions']) || ! \count($data['permissions'])) {
             $data['permissions'] = [];
         }
-
         //See if the role must contain a permission as per config
-        if (config('access.roles.role_must_contain_permission') && \count($data['permissions']) === 0) {
-            throw new GeneralException(__('exceptions.backend.access.roles.needs_permission'));
+        if (!config('access.roles.role_must_contain_permission')) {
+            return DB::transaction(function () use ($data): Model {
+                $role = parent::create(['name' => strtolower($data['name'])]);
+    
+                if ($role) {
+                    $role->givePermissionTo($data['permissions']);
+    
+                    event(new RoleCreated($role));
+    
+                    return $role;
+                }
+    
+                throw new GeneralException(trans('exceptions.backend.access.roles.create_error'));
+            });
         }
-
-        return DB::transaction(function () use ($data) {
+        if (\count($data['permissions']) !== 0) {
+            return DB::transaction(function () use ($data): Model {
+                $role = parent::create(['name' => strtolower($data['name'])]);
+    
+                if ($role) {
+                    $role->givePermissionTo($data['permissions']);
+    
+                    event(new RoleCreated($role));
+    
+                    return $role;
+                }
+    
+                throw new GeneralException(trans('exceptions.backend.access.roles.create_error'));
+            });
+        }
+        throw new GeneralException(__('exceptions.backend.access.roles.needs_permission'));
+        return DB::transaction(function () use ($data): Model {
             $role = parent::create(['name' => strtolower($data['name'])]);
 
             if ($role) {
@@ -86,13 +113,39 @@ class RoleRepository extends BaseRepository
         if (! isset($data['permissions']) || ! \count($data['permissions'])) {
             $data['permissions'] = [];
         }
-
         //See if the role must contain a permission as per config
-        if (config('access.roles.role_must_contain_permission') && \count($data['permissions']) === 0) {
-            throw new GeneralException(__('exceptions.backend.access.roles.needs_permission'));
+        if (!config('access.roles.role_must_contain_permission')) {
+            return DB::transaction(function () use ($role, $data): Role {
+                if ($role->update([
+                    'name' => strtolower($data['name']),
+                ])) {
+                    $role->syncPermissions($data['permissions']);
+    
+                    event(new RoleUpdated($role));
+    
+                    return $role;
+                }
+    
+                throw new GeneralException(trans('exceptions.backend.access.roles.update_error'));
+            });
         }
-
-        return DB::transaction(function () use ($role, $data) {
+        if (\count($data['permissions']) !== 0) {
+            return DB::transaction(function () use ($role, $data): Role {
+                if ($role->update([
+                    'name' => strtolower($data['name']),
+                ])) {
+                    $role->syncPermissions($data['permissions']);
+    
+                    event(new RoleUpdated($role));
+    
+                    return $role;
+                }
+    
+                throw new GeneralException(trans('exceptions.backend.access.roles.update_error'));
+            });
+        }
+        throw new GeneralException(__('exceptions.backend.access.roles.needs_permission'));
+        return DB::transaction(function () use ($role, $data): Role {
             if ($role->update([
                 'name' => strtolower($data['name']),
             ])) {

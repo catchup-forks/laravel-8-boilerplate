@@ -39,7 +39,7 @@ class UserNeedsPasswordReset extends Notification
      *
      * @return array|string
      */
-    public function via($notifiable)
+    public function via($notifiable): array
     {
         return ['mail'];
     }
@@ -49,7 +49,7 @@ class UserNeedsPasswordReset extends Notification
      *
      * @param mixed $notifiable
      *
-     * @return \Illuminate\Notifications\Messages\MailMessage
+     * @return MailMessage
      */
     public function toMail($notifiable)
     {

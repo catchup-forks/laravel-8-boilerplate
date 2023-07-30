@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Backend\Auth\Role;
 
+use App\Exceptions\GeneralException;
+use Exception;
 use App\Events\Backend\Auth\Role\RoleDeleted;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Auth\Role\ManageRoleRequest;
@@ -18,15 +20,9 @@ use App\Repositories\Backend\Auth\RoleRepository;
  */
 class RoleController extends Controller
 {
-    /**
-     * @var RoleRepository
-     */
-    protected $roleRepository;
+    protected RoleRepository $roleRepository;
 
-    /**
-     * @var PermissionRepository
-     */
-    protected $permissionRepository;
+    protected PermissionRepository $permissionRepository;
 
     /**
      * @param RoleRepository       $roleRepository
@@ -68,7 +64,7 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function store(StoreRoleRequest $request)
     {
@@ -101,7 +97,7 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function update(UpdateRoleRequest $request, Role $role)
     {
@@ -116,7 +112,7 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy(ManageRoleRequest $request, Role $role)
     {

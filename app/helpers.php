@@ -70,7 +70,7 @@ if (! function_exists('home_route')) {
      *
      * @return string
      */
-    function home_route()
+    function home_route(): string
     {
         if (auth()->check()) {
             if (auth()->user()->can('view backend')) {
@@ -145,7 +145,7 @@ if (! function_exists('camelcase_to_word')) {
      *
      * @return string
      */
-    function camelcase_to_word($str)
+    function camelcase_to_word($str): string
     {
         return implode(' ', preg_split('/
           (?<=[a-z])

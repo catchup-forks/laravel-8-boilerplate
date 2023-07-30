@@ -12,10 +12,7 @@ use Illuminate\View\View;
  */
 class SidebarComposer
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * SidebarComposer constructor.
@@ -32,7 +29,7 @@ class SidebarComposer
      *
      * @return bool|mixed
      */
-    public function compose(View $view)
+    public function compose(View $view): void
     {
         if (config('access.users.requires_approval')) {
             $view->with('pending_approval', $this->userRepository->getUnconfirmedCount());

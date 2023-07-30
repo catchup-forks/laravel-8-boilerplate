@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 use App\Events\Frontend\Auth\UserLoggedIn;
 use App\Events\Frontend\Auth\UserLoggedOut;
 use App\Exceptions\GeneralException;
@@ -32,7 +36,7 @@ class LoginController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function showLoginForm()
     {
@@ -56,7 +60,7 @@ class LoginController extends Controller
      * @param Request $request
      * @param         $user
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      *
      * @throws GeneralException
      */
@@ -65,16 +69,14 @@ class LoginController extends Controller
         // Check to see if the users account is confirmed and active
         if (! $user->isConfirmed()) {
             auth()->logout();
-
             // If the user is pending (account approval is on)
             if ($user->isPending()) {
                 throw new GeneralException(__('exceptions.frontend.auth.confirmation.pending'));
             }
-
             // Otherwise see if they want to resent the confirmation e-mail
-
             throw new GeneralException(__('exceptions.frontend.auth.confirmation.resend', ['url' => route('frontend.auth.account.confirm.resend', $user->{$user->getUuidName()})]));
-        } elseif (! $user->isActive()) {
+        }
+        if (! $user->isActive()) {
             auth()->logout();
             throw new GeneralException(__('exceptions.frontend.auth.deactivated'));
         }
@@ -94,7 +96,7 @@ class LoginController extends Controller
      *
      * @param Request $request
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function logout(Request $request)
     {
@@ -117,7 +119,7 @@ class LoginController extends Controller
     }
 
     /**
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
     public function logoutAs()
     {

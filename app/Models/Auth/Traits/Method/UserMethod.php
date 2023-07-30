@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models\Auth\Traits\Method;
 
+use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Container\EntryNotFoundException;
 /**
  * Trait UserMethod.
  */
@@ -28,9 +30,9 @@ trait UserMethod
     /**
      * @param bool $size
      *
-     * @return bool|\Illuminate\Contracts\Routing\UrlGenerator|mixed|string
+     * @return bool|UrlGenerator|mixed|string
      *
-     * @throws \Illuminate\Container\EntryNotFoundException
+     * @throws EntryNotFoundException
      */
     public function getPicture($size = false)
     {
@@ -47,11 +49,13 @@ trait UserMethod
         }
 
         $social_avatar = $this->providers()->where('provider', $this->avatar_type)->first();
-        if ($social_avatar && strlen($social_avatar->avatar)) {
-            return $social_avatar->avatar;
+        if (!$social_avatar) {
+            return false;
         }
-
-        return false;
+        if (!strlen($social_avatar->avatar)) {
+            return false;
+        }
+        return $social_avatar->avatar;
     }
 
     /**
@@ -59,7 +63,7 @@ trait UserMethod
      *
      * @return bool
      */
-    public function hasProvider($provider)
+    public function hasProvider($provider): bool
     {
         foreach ($this->providers as $p) {
             if ($p->provider == $provider) {
@@ -97,7 +101,7 @@ trait UserMethod
     /**
      * @return bool
      */
-    public function isPending()
+    public function isPending(): bool
     {
         return config('access.users.requires_approval') && ! $this->confirmed;
     }

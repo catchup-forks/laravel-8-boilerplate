@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Backend\Auth\User;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
+use Throwable;
+use App\Exceptions\GeneralException;
+use Exception;
 use App\Events\Backend\Auth\User\UserDeleted;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Auth\User\ManageUserRequest;
@@ -19,10 +24,7 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * UserController constructor.
@@ -37,7 +39,7 @@ class UserController extends Controller
     /**
      * @param ManageUserRequest $request
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function index(ManageUserRequest $request)
     {
@@ -64,7 +66,7 @@ class UserController extends Controller
      *
      * @return mixed
      *
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function store(StoreUserRequest $request)
     {
@@ -119,8 +121,8 @@ class UserController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
-     * @throws \Throwable
+     * @throws GeneralException
+     * @throws Throwable
      */
     public function update(UpdateUserRequest $request, User $user)
     {
@@ -141,7 +143,7 @@ class UserController extends Controller
      *
      * @return mixed
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy(ManageUserRequest $request, User $user)
     {

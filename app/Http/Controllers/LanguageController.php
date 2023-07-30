@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 /**
  * Class LanguageController.
  */
@@ -12,7 +13,7 @@ class LanguageController extends Controller
     /**
      * @param $locale
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
     public function __invoke($locale)
     {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\User;
 
+use App\Exceptions\GeneralException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\User\UpdateProfileRequest;
 use App\Repositories\Frontend\Auth\UserRepository;
@@ -13,10 +14,7 @@ use App\Repositories\Frontend\Auth\UserRepository;
  */
 class ProfileController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * ProfileController constructor.
@@ -33,7 +31,7 @@ class ProfileController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function update(UpdateProfileRequest $request)
     {

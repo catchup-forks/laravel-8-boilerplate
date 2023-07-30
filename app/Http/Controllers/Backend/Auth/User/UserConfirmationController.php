@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Backend\Auth\User;
 
+use App\Exceptions\GeneralException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Auth\User\ManageUserRequest;
 use App\Models\Auth\User;
@@ -15,10 +16,7 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserConfirmationController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * @param UserRepository $userRepository
@@ -56,7 +54,7 @@ class UserConfirmationController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function confirm(ManageUserRequest $request, User $user)
     {
@@ -71,7 +69,7 @@ class UserConfirmationController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function unconfirm(ManageUserRequest $request, User $user)
     {

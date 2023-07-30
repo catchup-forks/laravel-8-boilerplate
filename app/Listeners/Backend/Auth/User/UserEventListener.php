@@ -4,6 +4,19 @@ declare(strict_types=1);
 
 namespace App\Listeners\Backend\Auth\User;
 
+use Log;
+use Illuminate\Events\Dispatcher;
+use App\Events\Backend\Auth\User\UserCreated;
+use App\Events\Backend\Auth\User\UserUpdated;
+use App\Events\Backend\Auth\User\UserDeleted;
+use App\Events\Backend\Auth\User\UserConfirmed;
+use App\Events\Backend\Auth\User\UserUnconfirmed;
+use App\Events\Backend\Auth\User\UserPasswordChanged;
+use App\Events\Backend\Auth\User\UserDeactivated;
+use App\Events\Backend\Auth\User\UserReactivated;
+use App\Events\Backend\Auth\User\UserSocialDeleted;
+use App\Events\Backend\Auth\User\UserPermanentlyDeleted;
+use App\Events\Backend\Auth\User\UserRestored;
 /**
  * Class UserEventListener.
  */
@@ -14,7 +27,7 @@ class UserEventListener
      */
     public function onCreated($event): void
     {
-        \Log::info('User Created');
+        Log::info('User Created');
     }
 
     /**
@@ -22,7 +35,7 @@ class UserEventListener
      */
     public function onUpdated($event): void
     {
-        \Log::info('User Updated');
+        Log::info('User Updated');
     }
 
     /**
@@ -30,7 +43,7 @@ class UserEventListener
      */
     public function onDeleted($event): void
     {
-        \Log::info('User Deleted');
+        Log::info('User Deleted');
     }
 
     /**
@@ -38,7 +51,7 @@ class UserEventListener
      */
     public function onConfirmed($event): void
     {
-        \Log::info('User Confirmed');
+        Log::info('User Confirmed');
     }
 
     /**
@@ -46,7 +59,7 @@ class UserEventListener
      */
     public function onUnconfirmed($event): void
     {
-        \Log::info('User Unconfirmed');
+        Log::info('User Unconfirmed');
     }
 
     /**
@@ -54,7 +67,7 @@ class UserEventListener
      */
     public function onPasswordChanged($event): void
     {
-        \Log::info('User Password Changed');
+        Log::info('User Password Changed');
     }
 
     /**
@@ -62,7 +75,7 @@ class UserEventListener
      */
     public function onDeactivated($event): void
     {
-        \Log::info('User Deactivated');
+        Log::info('User Deactivated');
     }
 
     /**
@@ -70,7 +83,7 @@ class UserEventListener
      */
     public function onReactivated($event): void
     {
-        \Log::info('User Reactivated');
+        Log::info('User Reactivated');
     }
 
     /**
@@ -78,7 +91,7 @@ class UserEventListener
      */
     public function onSocialDeleted($event): void
     {
-        \Log::info('User Social Deleted');
+        Log::info('User Social Deleted');
     }
 
     /**
@@ -86,7 +99,7 @@ class UserEventListener
      */
     public function onPermanentlyDeleted($event): void
     {
-        \Log::info('User Permanently Deleted');
+        Log::info('User Permanently Deleted');
     }
 
     /**
@@ -94,68 +107,68 @@ class UserEventListener
      */
     public function onRestored($event): void
     {
-        \Log::info('User Restored');
+        Log::info('User Restored');
     }
 
     /**
      * Register the listeners for the subscriber.
      *
-     * @param \Illuminate\Events\Dispatcher $events
+     * @param Dispatcher $events
      */
     public function subscribe($events): void
     {
         $events->listen(
-            \App\Events\Backend\Auth\User\UserCreated::class,
+            UserCreated::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onCreated'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserUpdated::class,
+            UserUpdated::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onUpdated'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserDeleted::class,
+            UserDeleted::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onDeleted'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserConfirmed::class,
+            UserConfirmed::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onConfirmed'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserUnconfirmed::class,
+            UserUnconfirmed::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onUnconfirmed'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserPasswordChanged::class,
+            UserPasswordChanged::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onPasswordChanged'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserDeactivated::class,
+            UserDeactivated::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onDeactivated'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserReactivated::class,
+            UserReactivated::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onReactivated'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserSocialDeleted::class,
+            UserSocialDeleted::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onSocialDeleted'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserPermanentlyDeleted::class,
+            UserPermanentlyDeleted::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onPermanentlyDeleted'
         );
 
         $events->listen(
-            \App\Events\Backend\Auth\User\UserRestored::class,
+            UserRestored::class,
             'App\Listeners\Backend\Auth\User\UserEventListener@onRestored'
         );
     }

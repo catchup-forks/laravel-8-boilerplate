@@ -19,7 +19,7 @@ class ChangePassword implements Rule
      *
      * @return bool
      */
-    public function passes($attribute, $value)
+    public function passes($attribute, $value): bool
     {
         $uppercase = preg_match('@[A-Z]@', $value);
         $lowercase = preg_match('@[a-z]@', $value);

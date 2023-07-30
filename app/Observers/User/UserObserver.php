@@ -14,7 +14,7 @@ class UserObserver
     /**
      * Listen to the User created event.
      *
-     * @param \App\Models\Auth\User $user
+     * @param User $user
      *
      * @return void
      */
@@ -26,7 +26,7 @@ class UserObserver
     /**
      * Listen to the User updated event.
      *
-     * @param \App\Models\Auth\User $user
+     * @param User $user
      *
      * @return void
      */

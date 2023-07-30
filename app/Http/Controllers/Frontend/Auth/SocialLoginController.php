@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use Illuminate\Http\RedirectResponse;
 use App\Events\Frontend\Auth\UserLoggedIn;
 use App\Exceptions\GeneralException;
 use App\Helpers\Frontend\Auth\Socialite as SocialiteHelper;
@@ -17,15 +18,12 @@ use Laravel\Socialite\Facades\Socialite;
  */
 class SocialLoginController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * @var SocialiteHelper
      */
-    protected $socialiteHelper;
+    protected SocialiteHelper $socialiteHelper;
 
     /**
      * SocialLoginController constructor.
@@ -45,7 +43,7 @@ class SocialLoginController extends Controller
      *
      * @throws GeneralException
      *
-     * @return \Illuminate\Http\RedirectResponse|mixed
+     * @return RedirectResponse|mixed
      */
     public function login(Request $request, $provider)
     {

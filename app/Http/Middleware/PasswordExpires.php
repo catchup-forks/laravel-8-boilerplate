@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
+use Illuminate\Http\RedirectResponse;
 use Carbon\Carbon;
 use Closure;
 
@@ -16,7 +17,7 @@ class PasswordExpires
      * @param         $request
      * @param Closure $next
      *
-     * @return \Illuminate\Http\RedirectResponse|mixed
+     * @return RedirectResponse|mixed
      */
     public function handle($request, Closure $next)
     {

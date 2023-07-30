@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Repositories\Backend\Auth;
 
+use Exception;
+use Throwable;
+use Illuminate\Database\Eloquent\Model;
 use App\Events\Backend\Auth\User\UserConfirmed;
 use App\Events\Backend\Auth\User\UserCreated;
 use App\Events\Backend\Auth\User\UserDeactivated;
@@ -29,7 +32,7 @@ class UserRepository extends BaseRepository
     /**
      * @return string
      */
-    public function model()
+    public function model(): string
     {
         return User::class;
     }
@@ -97,12 +100,12 @@ class UserRepository extends BaseRepository
      *
      * @return User
      *
-     * @throws \Exception
-     * @throws \Throwable
+     * @throws Exception
+     * @throws Throwable
      */
     public function create(array $data): User
     {
-        return DB::transaction(function () use ($data) {
+        return DB::transaction(function () use ($data): Model {
             $user = parent::create([
                 'first_name'        => $data['first_name'],
                 'last_name'         => $data['last_name'],
@@ -149,8 +152,8 @@ class UserRepository extends BaseRepository
      * @return User
      *
      * @throws GeneralException
-     * @throws \Exception
-     * @throws \Throwable
+     * @throws Exception
+     * @throws Throwable
      */
     public function update(User $user, array $data): User
     {
@@ -161,7 +164,7 @@ class UserRepository extends BaseRepository
             $data['permissions'] = [];
         }
 
-        return DB::transaction(function () use ($user, $data) {
+        return DB::transaction(function () use ($user, $data): User {
             if ($user->update([
                 'first_name' => $data['first_name'],
                 'last_name'  => $data['last_name'],
@@ -188,7 +191,7 @@ class UserRepository extends BaseRepository
      *
      * @throws GeneralException
      */
-    public function updatePassword(User $user, $input): User
+    public function updatePassword(User $user, array $input): User
     {
         if ($user->update(['password' => $input['password']])) {
             event(new UserPasswordChanged($user));
@@ -303,8 +306,8 @@ class UserRepository extends BaseRepository
      * @return User
      *
      * @throws GeneralException
-     * @throws \Exception
-     * @throws \Throwable
+     * @throws Exception
+     * @throws Throwable
      */
     public function forceDelete(User $user): User
     {
@@ -312,7 +315,7 @@ class UserRepository extends BaseRepository
             throw new GeneralException(__('exceptions.backend.access.users.delete_first'));
         }
 
-        return DB::transaction(function () use ($user) {
+        return DB::transaction(function () use ($user): User {
             // Delete associated relationships
             $user->passwordHistories()->delete();
             $user->providers()->delete();

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Repositories\Frontend\Auth;
 
+use Illuminate\Database\Eloquent\Model;
+use Exception;
+use Throwable;
 use App\Events\Frontend\Auth\UserConfirmed;
 use App\Events\Frontend\Auth\UserProviderRegistered;
 use App\Exceptions\GeneralException;
@@ -25,7 +28,7 @@ class UserRepository extends BaseRepository
     /**
      * @return string
      */
-    public function model()
+    public function model(): string
     {
         return User::class;
     }
@@ -33,7 +36,7 @@ class UserRepository extends BaseRepository
     /**
      * @param $token
      *
-     * @return bool|\Illuminate\Database\Eloquent\Model
+     * @return bool|Model
      */
     public function findByPasswordResetToken($token)
     {
@@ -89,14 +92,14 @@ class UserRepository extends BaseRepository
     /**
      * @param array $data
      *
-     * @return \Illuminate\Database\Eloquent\Model|mixed
+     * @return Model|mixed
      *
-     * @throws \Exception
-     * @throws \Throwable
+     * @throws Exception
+     * @throws Throwable
      */
     public function create(array $data)
     {
-        return DB::transaction(function () use ($data) {
+        return DB::transaction(function () use ($data): Model {
             $user = parent::create([
                 'first_name'        => $data['first_name'],
                 'last_name'         => $data['last_name'],
@@ -203,7 +206,7 @@ class UserRepository extends BaseRepository
      *
      * @throws GeneralException
      */
-    public function updatePassword($input, $expired = false)
+    public function updatePassword(array $input, $expired = false)
     {
         $user = $this->getById(auth()->id());
 

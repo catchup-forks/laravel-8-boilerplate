@@ -59,7 +59,7 @@ class Socialite
      *
      * @return array
      */
-    public function getAcceptedProviders()
+    public function getAcceptedProviders(): array
     {
         return [
             'bitbucket',

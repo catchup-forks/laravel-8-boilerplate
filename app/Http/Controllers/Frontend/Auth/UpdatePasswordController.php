@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use App\Exceptions\GeneralException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\User\UpdatePasswordRequest;
 use App\Repositories\Frontend\Auth\UserRepository;
@@ -13,10 +14,7 @@ use App\Repositories\Frontend\Auth\UserRepository;
  */
 class UpdatePasswordController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * ChangePasswordController constructor.
@@ -33,7 +31,7 @@ class UpdatePasswordController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function update(UpdatePasswordRequest $request)
     {

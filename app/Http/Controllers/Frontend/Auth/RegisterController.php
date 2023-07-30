@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
+use Throwable;
 use App\Events\Frontend\Auth\UserRegistered;
 use App\Helpers\Frontend\Auth\Socialite;
 use App\Http\Controllers\Controller;
@@ -18,10 +22,7 @@ class RegisterController extends Controller
 {
     use RegistersUsers;
 
-    /**
-     * @var UserRepository
-     */
-    protected $userRepository;
+    protected UserRepository $userRepository;
 
     /**
      * RegisterController constructor.
@@ -46,7 +47,7 @@ class RegisterController extends Controller
     /**
      * Show the application registration form.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function showRegistrationForm()
     {
@@ -59,9 +60,9 @@ class RegisterController extends Controller
     /**
      * @param RegisterRequest $request
      *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return RedirectResponse|Redirector
      *
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function register(RegisterRequest $request)
     {

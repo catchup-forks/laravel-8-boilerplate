@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Backend\Auth\User;
 
+use Illuminate\Http\RedirectResponse;
 use App\Exceptions\GeneralException;
 use App\Helpers\Auth\Auth;
 use App\Http\Controllers\Controller;
@@ -19,7 +20,7 @@ class UserAccessController extends Controller
      * @param ManageUserRequest $request
      * @param User              $user
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      *
      * @throws GeneralException
      */

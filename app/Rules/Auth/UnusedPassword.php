@@ -40,7 +40,7 @@ class UnusedPassword implements Rule
      *
      * @return bool
      */
-    public function passes($attribute, $value)
+    public function passes($attribute, $value): bool
     {
         // Option is off
         if (! config('access.users.password_history')) {

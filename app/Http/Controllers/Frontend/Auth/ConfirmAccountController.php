@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use App\Exceptions\GeneralException;
 use App\Http\Controllers\Controller;
 use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
 use App\Repositories\Frontend\Auth\UserRepository;
@@ -13,10 +14,7 @@ use App\Repositories\Frontend\Auth\UserRepository;
  */
 class ConfirmAccountController extends Controller
 {
-    /**
-     * @var UserRepository
-     */
-    protected $user;
+    protected UserRepository $user;
 
     /**
      * ConfirmAccountController constructor.
@@ -33,7 +31,7 @@ class ConfirmAccountController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function confirm($token)
     {
@@ -47,7 +45,7 @@ class ConfirmAccountController extends Controller
      *
      * @return mixed
      *
-     * @throws \App\Exceptions\GeneralException
+     * @throws GeneralException
      */
     public function sendConfirmationEmail($uuid)
     {
