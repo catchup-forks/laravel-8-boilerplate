@@ -1,0 +1,307 @@
+.alert {
+	@apply relative px-3 py-3 mb-4 border rounded;
+}
+
+.alert-danger {
+	@apply bg-red-200 border-red-300 text-red-800;
+}
+
+.alert-info {
+	@apply bg-teal-200 border-teal-300 text-teal-800;
+}
+
+.alert-success {
+	@apply bg-green-200 border-green-300 text-green-800;
+}
+
+.alert-warning {
+	@apply bg-orange-200 border-orange-300 text-orange-800;
+}
+
+.align-items-center {
+	@apply items-center;
+}
+
+.align-self-center {
+	@apply self-center;
+}
+
+.badge {
+	@apply inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded;
+}
+
+.badge-danger {
+	@apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.badge-danger {
+	@apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.badge-info {
+	@apply bg-teal-500 text-white hover:bg-teal-600;
+}
+
+.badge-pill {
+	@apply rounded-full py-1 px-3;
+}
+
+.badge-primary {
+	@apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.badge-success {
+	@apply bg-green-500 text-white hover:green-600;
+}
+
+.badge-success {
+	@apply bg-green-500 text-white hover:green-600;
+}
+
+.badge-warning {
+	@apply bg-orange-400 text-black hover:bg-orange-500;
+}
+
+.bg-danger {
+	@apply bg-red-600;
+}
+
+.bg-dark {
+	@apply bg-gray-900;
+}
+
+.bg-info {
+	@apply bg-teal-500;
+}
+
+.bg-light {
+	@apply bg-gray-100;
+}
+
+.bg-success {
+	@apply bg-green-500;
+}
+
+.bg-warning {
+	@apply bg-yellow-500;
+}
+
+.breadcrumb {
+	@apply flex flex-wrap list-reset pt-3 pb-3 py-4 px-4 mb-4 bg-gray-200 rounded;
+}
+
+.breadcrumb-item {
+	@apply inline-block px-2 py-2 text-gray-700;
+}
+
+.btn {
+	@apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline;
+}
+
+.btn-group {
+	@apply relative inline-flex align-middle;
+}
+
+.btn-success {
+	@apply bg-green-500 text-white hover:bg-green-600;
+}
+
+.btn-toolbar {
+	@apply flex flex-wrap justify-start;
+}
+
+.card {
+	@apply relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300;
+}
+
+.card-body {
+	@apply flex-auto p-6;
+}
+
+.card-footer {
+	@apply py-3 px-6 bg-gray-200 border-t-1 border-gray-300;
+}
+
+.card-header {
+	@apply py-3 px-6 mb-0 bg-gray-200 border-b-1 border-gray-300 text-gray-900;
+}
+
+.card-title {
+	@apply mb-3;
+}
+
+.close {
+	@apply absolute top-0 bottom-0 right-0 px-4 py-3;
+}
+
+.col {
+	@apply relative flex-grow max-w-full flex-1 px-4;
+}
+
+.col-5 {
+	@apply w-2/5;
+}
+
+.col-7 {
+	@apply w-3/5;
+}
+
+.col-md-10 {
+	@apply md:w-4/5 pr-4 pl-4;
+}
+
+.col-md-6 {
+	@apply md:w-1/2 pr-4 pl-4;
+}
+
+.col-sm-5 {
+	@apply sm:w-2/5 pr-4 pl-4;
+}
+
+.col-sm-7 {
+	@apply sm:w-3/5 pr-4 pl-4;
+}
+
+.col-sm-8 {
+	@apply sm:w-2/3 pr-4 pl-4;
+}
+
+.collapse {
+	@apply hidden;
+}
+
+.container {
+	@apply container mx-auto sm:px-4;
+}
+
+.container-fluid {
+	@apply container max-w-full mx-auto sm:px-4;
+}
+
+.d-flex {
+	@apply flex;
+}
+
+.d-lg-none {
+	@apply lg:hidden;
+}
+
+.dropdown {
+	@apply relative;
+}
+
+.dropdown-header {
+	@apply block py-2 px-6 mb-0 text-sm text-gray-800 whitespace-no-wrap;
+}
+
+.dropdown-item {
+	@apply block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0;
+}
+
+.dropdown-menu {
+	@apply  absolute left-0 z-50 float-left hidden list-reset	 py-2 mt-1 text-base bg-white border border-gray-300 rounded;
+}
+
+.dropdown-toggle {
+	@apply  inline-block w-0 h-0 ml-1 align border-b-0 border-t-1 border-r-1 border-l-1;
+}
+
+.fixed-top {
+	@apply top-0;
+}
+
+.font-weight-bold {
+	@apply font-bold;
+}
+
+.form-group {
+	@apply mb-4;
+}
+
+.justify-content-center {
+	@apply justify-center;
+}
+
+.list-group {
+	@apply flex flex-col pl-0 mb-0 border rounded border-gray-300;
+}
+
+.list-group-item {
+	@apply relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline;
+}
+
+.nav {
+	@apply flex flex-wrap list-none pl-0 mb-0;
+}
+
+.nav-link {
+	@apply inline-block py-2 px-4 no-underline;
+}
+
+.nav-tabs {
+	@apply border border-t-0 border-r-0 border-l-0 border-b-1 border-gray-200;
+}
+
+.navbar {
+	@apply relative flex flex-wrap items-center content-between py-3 px-4;
+}
+
+.navbar-brand {
+	@apply inline-block pt-1 pb-1 mr-4 text-lg whitespace-no-wrap;
+}
+
+.navbar-collapse {
+	@apply flex-grow items-center;
+}
+
+.navbar-dark {
+	@apply text-white;
+}
+
+.navbar-expand-md {
+	@apply ;
+}
+
+.navbar-nav {
+	@apply flex flex-wrap list-reset pl-0 mb-0;
+}
+
+.navbar-toggler {
+	@apply py-1 px-2 text-md leading-normal bg-transparent border border-transparent rounded;
+}
+
+.navbar-toggler-icon {
+	@apply px-5 py-1 border border-gray-600 rounded;
+}
+
+.p-3 {
+	@apply p-4;
+}
+
+.row {
+	@apply flex flex-wrap ;
+}
+
+.small {
+	@apply text-xs;
+}
+
+.table {
+	@apply w-full max-w-full mb-4 bg-transparent;
+}
+
+.table-responsive {
+	@apply block w-full overflow-auto scrolling-touch;
+}
+
+.text-muted {
+	@apply text-gray-700;
+}
+
+.text-truncate {
+	@apply truncate;
+}
+
+.text-uppercase {
+	@apply uppercase;
+}
