@@ -1,30 +1,36 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
-  },
-  "dependencies": {
-    "perfect-scrollbar": "^1.5"
-  },
-  "devDependencies": {
-    "@coreui/coreui": "^2.1",
-    "@fortawesome/fontawesome-svg-core": "^1.3",
-    "@fortawesome/free-brands-svg-icons": "^5.15",
-    "@fortawesome/free-regular-svg-icons": "^5.15",
-    "@fortawesome/free-solid-svg-icons": "^5.15",
-    "axios": "*",
-    "bootstrap": "^4.6",
-    "cross-env": "^5.2",
-    "jquery": "^3.7",
-    "laravel-mix": "^6.0",
-    "lodash": "^4.17",
-    "pace": "^1.0",
-    "popper.js": "^1.16",
-    "simple-line-icons": "^2.5",
-    "sweetalert2": "^7.33"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "dependencies": {
+        "perfect-scrollbar": "^1.5"
+    },
+    "devDependencies": {
+        "@coreui/coreui": "^2.1",
+        "@fortawesome/fontawesome-svg-core": "^1.3",
+        "@fortawesome/free-brands-svg-icons": "^5.15",
+        "@fortawesome/free-regular-svg-icons": "^5.15",
+        "@fortawesome/free-solid-svg-icons": "^5.15",
+        "autoprefixer": "^10.3",
+        "axios": "*",
+        "bootstrap": "^4.6",
+        "cross-env": "^5.2",
+        "jquery": "^3.7",
+        "laravel-mix": "^6.0",
+        "lodash": "^4.17",
+        "pace": "github:HubSpot/pace#v1.0.2",
+        "popper.js": "^1.16",
+        "postcss": "^8.3",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.64.1",
+        "sass-loader": "^12.1.0",
+        "simple-line-icons": "^2.5",
+        "sweetalert2": "^7.33",
+        "tailwindcss": "^3.3"
+    }
 }
