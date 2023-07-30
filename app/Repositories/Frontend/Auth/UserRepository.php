@@ -25,9 +25,6 @@ use Illuminate\Support\Facades\Storage;
  */
 class UserRepository extends BaseRepository
 {
-    /**
-     * @return string
-     */
     public function model(): string
     {
         return User::class;
@@ -90,7 +87,6 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param array $data
      *
      * @return Model|mixed
      *
@@ -135,11 +131,9 @@ class UserRepository extends BaseRepository
 
     /**
      * @param                   $id
-     * @param array             $input
      * @param bool|UploadedFile $image
      *
      * @return array|bool
-     *
      * @throws GeneralException
      */
     public function update($id, array $input, $image = false)

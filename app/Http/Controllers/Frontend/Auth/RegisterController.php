@@ -24,8 +24,6 @@ class RegisterController extends Controller
 
     /**
      * RegisterController constructor.
-     *
-     * @param UserRepository $userRepository
      */
     public function __construct(protected UserRepository $userRepository)
     {
@@ -55,10 +53,8 @@ class RegisterController extends Controller
     }
 
     /**
-     * @param RegisterRequest $request
      *
      * @return RedirectResponse|Redirector
-     *
      * @throws Throwable
      */
     public function register(RegisterRequest $request)

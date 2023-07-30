@@ -17,18 +17,13 @@ use Illuminate\Support\Facades\DB;
  */
 class RoleRepository extends BaseRepository
 {
-    /**
-     * @return string
-     */
     public function model(): string
     {
         return Role::class;
     }
 
     /**
-     * @param array $data
      *
-     * @return Role
      *
      * @throws GeneralException
      */
@@ -77,24 +72,9 @@ class RoleRepository extends BaseRepository
         }
 
         throw new GeneralException(__('exceptions.backend.access.roles.needs_permission'));
-        return DB::transaction(function () use ($data): Model {
-            $role = parent::create(['name' => strtolower($data['name'])]);
-
-            if ($role) {
-                $role->givePermissionTo($data['permissions']);
-
-                event(new RoleCreated($role));
-
-                return $role;
-            }
-
-            throw new GeneralException(trans('exceptions.backend.access.roles.create_error'));
-        });
     }
 
     /**
-     * @param Role  $role
-     * @param array $data
      *
      * @return mixed
      *
@@ -129,6 +109,7 @@ class RoleRepository extends BaseRepository
 
                     return $role;
                 }
+
                 throw new GeneralException(trans('exceptions.backend.access.roles.update_error'));
             });
         }
@@ -144,29 +125,16 @@ class RoleRepository extends BaseRepository
 
                     return $role;
                 }
+
                 throw new GeneralException(trans('exceptions.backend.access.roles.update_error'));
             });
         }
 
         throw new GeneralException(__('exceptions.backend.access.roles.needs_permission'));
-        return DB::transaction(static function () use ($role, $data) : Role {
-            if ($role->update([
-                'name' => strtolower($data['name']),
-            ])) {
-                $role->syncPermissions($data['permissions']);
-
-                event(new RoleUpdated($role));
-
-                return $role;
-            }
-            throw new GeneralException(trans('exceptions.backend.access.roles.update_error'));
-        });
     }
 
     /**
      * @param $name
-     *
-     * @return bool
      */
     protected function roleExists($name): bool
     {

@@ -14,8 +14,6 @@ class HtmlHelper
 {
     /**
      * HtmlHelper constructor.
-     *
-     * @param UrlGenerator|null $url
      */
     public function __construct(
         /**
@@ -28,9 +26,7 @@ class HtmlHelper
 
     /**
      * @param       $url
-     * @param array $attributes
      * @param null  $secure
-     *
      * @return mixed
      */
     public function style($url, array $attributes = [], $secure = null): HtmlString
@@ -48,10 +44,8 @@ class HtmlHelper
      * Generate a link to a JavaScript file.
      *
      * @param string $url
-     * @param array  $attributes
      * @param bool   $secure
      *
-     * @return HtmlString
      */
     public function script($url, array $attributes = [], $secure = null): HtmlString
     {
@@ -87,8 +81,6 @@ class HtmlHelper
      * Build an HTML attribute string from an array.
      *
      * @param array $attributes
-     *
-     * @return string
      */
     public function attributes($attributes): string
     {
@@ -97,9 +89,7 @@ class HtmlHelper
         foreach ((array) $attributes as $key => $value) {
             $element = $this->attributeElement($key, $value);
 
-            if (! is_null($element)) {
-                $html[] = $element;
-            }
+            $html[] = $element;
         }
 
         return $html !== [] ? ' ' . implode(' ', $html) : '';
@@ -129,17 +119,13 @@ class HtmlHelper
             return $value ? $key : '';
         }
 
-        if (! is_null($value)) {
-            return $key . '="' . e($value) . '"';
-        }
+        return $key . '="' . e($value) . '"';
     }
 
     /**
      * Transform the string to an Html serializable object.
      *
      * @param $html
-     *
-     * @return HtmlString
      */
     protected function toHtmlString($html): HtmlString
     {

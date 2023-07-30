@@ -12,9 +12,7 @@ use Carbon\Carbon;
 class Timezone
 {
     /**
-     * @param Carbon $date
      * @param string $format
-     *
      * @return Carbon
      */
     public function convertToLocal(Carbon $date, $format = 'D M j G:i:s T Y'): string
@@ -24,8 +22,6 @@ class Timezone
 
     /**
      * @param $date
-     *
-     * @return Carbon
      */
     public function convertFromLocal($date): Carbon
     {

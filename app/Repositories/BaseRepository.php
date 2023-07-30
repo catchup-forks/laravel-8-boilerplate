@@ -106,7 +106,6 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * Get all the model records in the database.
      *
-     * @param array $columns
      *
      * @return Collection|static[]
      */
@@ -123,8 +122,6 @@ abstract class BaseRepository implements RepositoryContract
 
     /**
      * Count the number of specified model records in the database.
-     *
-     * @return int
      */
     public function count(): int
     {
@@ -134,7 +131,6 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * Create a new model record in the database.
      *
-     * @param array $data
      *
      * @return Model
      */
@@ -148,7 +144,6 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * Create one or more new model records in the database.
      *
-     * @param array $data
      *
      * @return Collection
      */
@@ -198,9 +193,7 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * Delete multiple records.
      *
-     * @param array $ids
      *
-     * @return int
      */
     public function deleteMultipleById(array $ids): int
     {
@@ -210,7 +203,6 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * Get the first specified model record from the database.
      *
-     * @param array $columns
      *
      * @return Model|static
      */
@@ -228,7 +220,6 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * Get all the specified model records in the database.
      *
-     * @param array $columns
      *
      * @return Collection|static[]
      */
@@ -247,7 +238,6 @@ abstract class BaseRepository implements RepositoryContract
      * Get the specified model record from the database.
      *
      * @param       $id
-     * @param array $columns
      *
      * @return Collection|Model
      */
@@ -263,7 +253,6 @@ abstract class BaseRepository implements RepositoryContract
     /**
      * @param       $item
      * @param       $column
-     * @param array $columns
      *
      * @return Model|null|static
      */
@@ -278,10 +267,8 @@ abstract class BaseRepository implements RepositoryContract
 
     /**
      * @param int    $limit
-     * @param array  $columns
      * @param string $pageName
      * @param null   $page
-     *
      * @return LengthAwarePaginator
      */
     public function paginate($limit = 25, array $columns = ['*'], $pageName = 'page', $page = null)
@@ -299,8 +286,6 @@ abstract class BaseRepository implements RepositoryContract
      * Update the specified model record in the database.
      *
      * @param       $id
-     * @param array $data
-     * @param array $options
      *
      * @return Collection|Model
      */

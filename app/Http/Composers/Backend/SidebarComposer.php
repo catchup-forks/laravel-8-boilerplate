@@ -14,16 +14,12 @@ class SidebarComposer
 {
     /**
      * SidebarComposer constructor.
-     *
-     * @param UserRepository $userRepository
      */
     public function __construct(protected UserRepository $userRepository)
     {
     }
 
     /**
-     * @param View $view
-     *
      * @return bool|mixed
      */
     public function compose(View $view): void

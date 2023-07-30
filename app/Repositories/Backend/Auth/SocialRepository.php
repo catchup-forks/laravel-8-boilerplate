@@ -15,8 +15,6 @@ use App\Models\Auth\User;
 class SocialRepository
 {
     /**
-     * @param User          $user
-     * @param SocialAccount $social
      *
      * @return bool
      *

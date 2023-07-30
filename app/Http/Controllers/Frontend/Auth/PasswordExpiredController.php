@@ -25,8 +25,6 @@ class PasswordExpiredController extends Controller
     }
 
     /**
-     * @param UpdatePasswordRequest $request
-     * @param UserRepository        $userRepository
      *
      * @return mixed
      *

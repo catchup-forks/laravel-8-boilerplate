@@ -6,7 +6,6 @@ namespace App\Models\Auth;
 
 use App\Models\Auth\Traits\Attribute\UserAttribute;
 use App\Models\Auth\Traits\Method\UserMethod;
-use App\Models\Auth\Traits\Relationship\UserRelationship;
 use App\Models\Auth\Traits\Scope\UserScope;
 use App\Models\Auth\Traits\SendUserPasswordReset;
 use App\Models\Traits\Uuid;
@@ -26,7 +25,6 @@ class User extends Authenticatable
     use SoftDeletes;
     use UserAttribute;
     use UserMethod;
-    use UserRelationship;
     use UserScope;
     use Uuid;
 

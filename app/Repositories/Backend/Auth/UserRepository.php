@@ -29,9 +29,6 @@ use Illuminate\Support\Facades\DB;
  */
 class UserRepository extends BaseRepository
 {
-    /**
-     * @return string
-     */
     public function model(): string
     {
         return User::class;
@@ -57,7 +54,7 @@ class UserRepository extends BaseRepository
     public function getActivePaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
     {
         return $this->model
-            ->with('roles', 'permissions', 'providers')
+            ->with('roles', 'permissions')
             ->active()
             ->orderBy($orderBy, $sort)
             ->paginate($paged);
@@ -67,13 +64,11 @@ class UserRepository extends BaseRepository
      * @param int    $paged
      * @param string $orderBy
      * @param string $sort
-     *
-     * @return LengthAwarePaginator
      */
     public function getInactivePaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
     {
         return $this->model
-            ->with('roles', 'permissions', 'providers')
+            ->with('roles', 'permissions')
             ->active(false)
             ->orderBy($orderBy, $sort)
             ->paginate($paged);
@@ -83,22 +78,18 @@ class UserRepository extends BaseRepository
      * @param int    $paged
      * @param string $orderBy
      * @param string $sort
-     *
-     * @return LengthAwarePaginator
      */
     public function getDeletedPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
     {
         return $this->model
-            ->with('roles', 'permissions', 'providers')
+            ->with('roles', 'permissions')
             ->onlyTrashed()
             ->orderBy($orderBy, $sort)
             ->paginate($paged);
     }
 
     /**
-     * @param array $data
      *
-     * @return User
      *
      * @throws Exception
      * @throws Throwable
@@ -146,10 +137,7 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User  $user
-     * @param array $data
      *
-     * @return User
      *
      * @throws GeneralException
      * @throws Exception
@@ -178,15 +166,14 @@ class UserRepository extends BaseRepository
 
                 return $user;
             }
+
             throw new GeneralException(__('exceptions.backend.access.users.update_error'));
         });
     }
 
     /**
-     * @param User $user
      * @param      $input
      *
-     * @return User
      *
      * @throws GeneralException
      */
@@ -202,10 +189,8 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User $user
      * @param      $status
      *
-     * @return User
      *
      * @throws GeneralException
      */
@@ -231,9 +216,7 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User $user
      *
-     * @return User
      *
      * @throws GeneralException
      */
@@ -261,9 +244,7 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User $user
      *
-     * @return User
      *
      * @throws GeneralException
      */
@@ -296,9 +277,7 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User $user
      *
-     * @return User
      *
      * @throws GeneralException
      * @throws Exception
@@ -320,14 +299,13 @@ class UserRepository extends BaseRepository
 
                 return $user;
             }
+
             throw new GeneralException(__('exceptions.backend.access.users.delete_error'));
         });
     }
 
     /**
-     * @param User $user
      *
-     * @return User
      *
      * @throws GeneralException
      */
@@ -347,9 +325,7 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User $user
      * @param      $email
-     *
      * @throws GeneralException
      */
     protected function checkUserByEmail(User $user, $email): void

@@ -16,16 +16,11 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserConfirmationController extends Controller
 {
-    /**
-     * @param UserRepository $userRepository
-     */
     public function __construct(protected UserRepository $userRepository)
     {
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return mixed
      */
@@ -46,8 +41,6 @@ class UserConfirmationController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return mixed
      *
@@ -61,8 +54,6 @@ class UserConfirmationController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return mixed
      *

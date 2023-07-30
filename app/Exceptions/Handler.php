@@ -40,9 +40,7 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param \Throwable $exception
      *
-     * @return void
      */
     public function report(Throwable $exception): void
     {
@@ -53,7 +51,6 @@ class Handler extends ExceptionHandler
      * Render an exception into an HTTP response.
      *
      * @param Request $request
-     * @param \Throwable               $exception
      *
      * @return Response
      */
@@ -70,7 +67,6 @@ class Handler extends ExceptionHandler
 
     /**
      * @param Request $request
-     * @param AuthenticationException  $exception
      *
      * @return JsonResponse|RedirectResponse
      */

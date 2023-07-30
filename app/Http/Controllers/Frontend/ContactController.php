@@ -24,8 +24,6 @@ class ContactController extends Controller
     }
 
     /**
-     * @param SendContactRequest $request
-     *
      * @return mixed
      */
     public function send(SendContactRequest $request)

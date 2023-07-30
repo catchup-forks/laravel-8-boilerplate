@@ -13,10 +13,8 @@ use App\Models\Auth\User;
 class SessionRepository
 {
     /**
-     * @param User $user
      *
      * @return mixed
-     *
      * @throws GeneralException
      */
     public function clearSession(User $user)

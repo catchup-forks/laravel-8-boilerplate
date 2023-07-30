@@ -26,16 +26,12 @@ class UserController extends Controller
 {
     /**
      * UserController constructor.
-     *
-     * @param UserRepository $userRepository
      */
     public function __construct(protected UserRepository $userRepository)
     {
     }
 
     /**
-     * @param ManageUserRequest $request
-     *
      * @return Factory|View
      */
     public function index(ManageUserRequest $request)
@@ -45,9 +41,6 @@ class UserController extends Controller
     }
 
     /**
-     * @param ManageUserRequest    $request
-     * @param RoleRepository       $roleRepository
-     * @param PermissionRepository $permissionRepository
      *
      * @return mixed
      */
@@ -59,10 +52,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param StoreUserRequest $request
      *
      * @return mixed
-     *
      * @throws Throwable
      */
     public function store(StoreUserRequest $request)
@@ -83,8 +74,6 @@ class UserController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return mixed
      */
@@ -95,10 +84,6 @@ class UserController extends Controller
     }
 
     /**
-     * @param ManageUserRequest    $request
-     * @param RoleRepository       $roleRepository
-     * @param PermissionRepository $permissionRepository
-     * @param User                 $user
      *
      * @return mixed
      */
@@ -113,11 +98,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param UpdateUserRequest $request
-     * @param User              $user
      *
      * @return mixed
-     *
      * @throws GeneralException
      * @throws Throwable
      */
@@ -135,8 +117,6 @@ class UserController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return mixed
      *

@@ -15,7 +15,6 @@ class PasswordExpires
 {
     /**
      * @param         $request
-     * @param Closure $next
      *
      * @return RedirectResponse|mixed
      */

@@ -16,16 +16,11 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserPasswordController extends Controller
 {
-    /**
-     * @param UserRepository $userRepository
-     */
     public function __construct(protected UserRepository $userRepository)
     {
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return mixed
      */
@@ -36,8 +31,6 @@ class UserPasswordController extends Controller
     }
 
     /**
-     * @param UpdateUserPasswordRequest $request
-     * @param User                      $user
      *
      * @return mixed
      *

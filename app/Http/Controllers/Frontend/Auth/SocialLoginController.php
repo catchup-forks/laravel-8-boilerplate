@@ -20,20 +20,15 @@ class SocialLoginController extends Controller
 {
     /**
      * SocialLoginController constructor.
-     *
-     * @param UserRepository  $userRepository
-     * @param SocialiteHelper $socialiteHelper
      */
     public function __construct(protected UserRepository $userRepository, protected SocialiteHelper $socialiteHelper)
     {
     }
 
     /**
-     * @param Request $request
      * @param         $provider
      *
      * @throws GeneralException
-     *
      * @return RedirectResponse|mixed
      */
     public function login(Request $request, $provider)

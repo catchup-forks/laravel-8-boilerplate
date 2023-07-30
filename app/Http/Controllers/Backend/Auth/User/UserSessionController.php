@@ -16,10 +16,6 @@ use App\Repositories\Backend\Auth\SessionRepository;
 class UserSessionController extends Controller
 {
     /**
-     * @param ManageUserRequest $request
-     * @param SessionRepository $sessionRepository
-     * @param User              $user
-     *
      * @return mixed
      *
      * @throws GeneralException

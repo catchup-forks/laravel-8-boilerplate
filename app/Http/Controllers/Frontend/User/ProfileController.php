@@ -16,18 +16,14 @@ class ProfileController extends Controller
 {
     /**
      * ProfileController constructor.
-     *
-     * @param UserRepository $userRepository
      */
     public function __construct(protected UserRepository $userRepository)
     {
     }
 
     /**
-     * @param UpdateProfileRequest $request
      *
      * @return mixed
-     *
      * @throws GeneralException
      */
     public function update(UpdateProfileRequest $request)

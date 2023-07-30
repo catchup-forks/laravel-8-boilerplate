@@ -16,16 +16,11 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserStatusController extends Controller
 {
-    /**
-     * @param UserRepository $userRepository
-     */
     public function __construct(protected UserRepository $userRepository)
     {
     }
 
     /**
-     * @param ManageUserRequest $request
-     *
      * @return mixed
      */
     public function getDeactivated(ManageUserRequest $request)
@@ -35,8 +30,6 @@ class UserStatusController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     *
      * @return mixed
      */
     public function getDeleted(ManageUserRequest $request)
@@ -46,8 +39,6 @@ class UserStatusController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      * @param                   $status
      *
      * @return mixed
@@ -66,11 +57,8 @@ class UserStatusController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $deletedUser
      *
      * @return mixed
-     *
      * @throws GeneralException
      * @throws Throwable
      */
@@ -82,8 +70,6 @@ class UserStatusController extends Controller
     }
 
     /**
-     * @param ManageUserRequest $request
-     * @param User              $deletedUser
      *
      * @return mixed
      *

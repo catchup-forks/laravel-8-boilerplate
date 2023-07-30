@@ -26,8 +26,6 @@ class ResetPasswordController extends Controller
 
     /**
      * ChangePasswordController constructor.
-     *
-     * @param UserRepository $userRepository
      */
     public function __construct(protected UserRepository $userRepository)
     {
@@ -67,7 +65,6 @@ class ResetPasswordController extends Controller
     /**
      * Reset the given user's password.
      *
-     * @param ResetPasswordRequest $request
      *
      * @return RedirectResponse|JsonResponse
      */
@@ -96,8 +93,6 @@ class ResetPasswordController extends Controller
      *
      * @param CanResetPassword $user
      * @param string                                      $password
-     *
-     * @return void
      */
     protected function resetPassword(Authenticatable $user, $password): void
     {

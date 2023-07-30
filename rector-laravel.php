@@ -51,7 +51,7 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->importNames(true);
     $rectorConfig->importShortClasses();
 
-    $rectorConfig->parameters()->set(Option::REMOVE_UNUSED_IMPORTS, true); // don't import everything, only affected
+    //$rectorConfig->parameters()->set(Option::REMOVE_UNUSED_IMPORTS, true); // don't import everything, only affected
 
     //$rectorConfig->rule(\Rector\Php80\Rector\Class_\);
 
@@ -96,12 +96,12 @@ return static function (RectorConfig $rectorConfig): void {
 
     // added this
     $rectorConfig->sets([
-        SetList::TYPE_DECLARATION,
-        SetList::EARLY_RETURN,
+        //SetList::TYPE_DECLARATION,
+        //SetList::EARLY_RETURN,
         ////SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION,
-        LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
+        //LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
         SetList::CODING_STYLE,
-        //SetList::DEAD_CODE,
+        SetList::DEAD_CODE,
         //SetList::CODE_QUALITY,
         //LaravelSetList::LARAVEL_CODE_QUALITY,
         //LaravelLevelSetList::UP_TO_LARAVEL_80,

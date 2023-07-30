@@ -20,17 +20,11 @@ use App\Repositories\Backend\Auth\RoleRepository;
  */
 class RoleController extends Controller
 {
-    /**
-     * @param RoleRepository       $roleRepository
-     * @param PermissionRepository $permissionRepository
-     */
     public function __construct(protected RoleRepository $roleRepository, protected PermissionRepository $permissionRepository)
     {
     }
 
     /**
-     * @param ManageRoleRequest $request
-     *
      * @return mixed
      */
     public function index(ManageRoleRequest $request)
@@ -43,8 +37,6 @@ class RoleController extends Controller
     }
 
     /**
-     * @param ManageRoleRequest $request
-     *
      * @return mixed
      */
     public function create(ManageRoleRequest $request)
@@ -54,10 +46,8 @@ class RoleController extends Controller
     }
 
     /**
-     * @param StoreRoleRequest $request
      *
      * @return mixed
-     *
      * @throws GeneralException
      */
     public function store(StoreRoleRequest $request)
@@ -68,8 +58,6 @@ class RoleController extends Controller
     }
 
     /**
-     * @param ManageRoleRequest $request
-     * @param Role              $role
      *
      * @return mixed
      */
@@ -86,8 +74,6 @@ class RoleController extends Controller
     }
 
     /**
-     * @param UpdateRoleRequest $request
-     * @param Role              $role
      *
      * @return mixed
      *
@@ -101,8 +87,6 @@ class RoleController extends Controller
     }
 
     /**
-     * @param ManageRoleRequest $request
-     * @param Role              $role
      *
      * @return mixed
      *

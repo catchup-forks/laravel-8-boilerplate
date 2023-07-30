@@ -57,11 +57,9 @@ class LoginController extends Controller
     /**
      * The user has been authenticated.
      *
-     * @param Request $request
      * @param         $user
      *
      * @return RedirectResponse
-     *
      * @throws GeneralException
      */
     protected function authenticated(Request $request, $user)
@@ -96,7 +94,6 @@ class LoginController extends Controller
     /**
      * Log the user out of the application.
      *
-     * @param Request $request
      *
      * @return Response
      */

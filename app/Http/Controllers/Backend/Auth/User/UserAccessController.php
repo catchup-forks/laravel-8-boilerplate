@@ -17,8 +17,6 @@ use App\Models\Auth\User;
 class UserAccessController extends Controller
 {
     /**
-     * @param ManageUserRequest $request
-     * @param User              $user
      *
      * @return RedirectResponse
      *

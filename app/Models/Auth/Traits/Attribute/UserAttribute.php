@@ -18,8 +18,8 @@ trait UserAttribute
     {
         // If password was accidentally passed in already hashed, try not to double hash it
         if (
-            (\strlen($password) === 60 && preg_match('/^\$2y\$/', $password)) ||
-            (\strlen($password) === 95 && preg_match('/^\$argon2i\$/', $password))
+            (\strlen($password) === 60 && preg_match('#^\$2y\$#', $password)) ||
+            (\strlen($password) === 95 && preg_match('#^\$argon2i\$#', $password))
         ) {
             $hash = $password;
         } else {
@@ -30,9 +30,6 @@ trait UserAttribute
         $this->attributes['password'] = $hash;
     }
 
-    /**
-     * @return string
-     */
     public function getStatusLabelAttribute(): string
     {
         if ($this->isActive()) {
@@ -42,9 +39,6 @@ trait UserAttribute
         return "<span class='badge badge-danger'>" . __('labels.general.inactive') . '</span>';
     }
 
-    /**
-     * @return string
-     */
     public function getConfirmedLabelAttribute(): string
     {
         if ($this->isConfirmed()) {
@@ -61,9 +55,6 @@ trait UserAttribute
         return '<a href="' . route('admin.auth.user.confirm', $this) . '" data-toggle="tooltip" data-placement="top" title="' . __('buttons.backend.access.users.confirm') . '" name="confirm_item"><span class="badge badge-danger" style="cursor:pointer">' . __('labels.general.no') . '</span></a>';
     }
 
-    /**
-     * @return string
-     */
     public function getRolesLabelAttribute(): string
     {
         $roles = $this->getRoleNames()->toArray();
@@ -77,9 +68,6 @@ trait UserAttribute
         return 'N/A';
     }
 
-    /**
-     * @return string
-     */
     public function getPermissionsLabelAttribute(): string
     {
         $permissions = $this->getDirectPermissions()->toArray();
@@ -119,26 +107,6 @@ trait UserAttribute
         return $this->getPicture();
     }
 
-    /**
-     * @return string
-     */
-    public function getSocialButtonsAttribute()
-    {
-        $accounts = [];
-
-        foreach ($this->providers as $social) {
-            $accounts[] = '<a href="' . route(
-                'admin.auth.user.social.unlink',
-                [$this, $social]
-            ) . '" data-toggle="tooltip" data-placement="top" title="' . __('buttons.backend.access.users.unlink') . '" data-method="delete"><i class="fab fa-' . $social->provider . '"></i></a>';
-        }
-
-        return \count($accounts) ? implode(' ', $accounts) : 'None';
-    }
-
-    /**
-     * @return string
-     */
     public function getLoginAsButtonAttribute(): string
     {
         // If the admin is currently NOT spoofing a user
@@ -157,9 +125,6 @@ trait UserAttribute
         return '';
     }
 
-    /**
-     * @return string
-     */
     public function getClearSessionButtonAttribute(): string
     {
         if ($this->id == auth()->id()) {
@@ -177,33 +142,21 @@ trait UserAttribute
                  class="dropdown-item" name="confirm_item">' . __('buttons.backend.access.users.clear_session') . '</a> ';
     }
 
-    /**
-     * @return string
-     */
     public function getShowButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.show', $this) . '" data-toggle="tooltip" data-placement="top" title="' . __('buttons.general.crud.view') . '" class="btn btn-info"><i class="fas fa-eye"></i></a>';
     }
 
-    /**
-     * @return string
-     */
     public function getEditButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.edit', $this) . '" data-toggle="tooltip" data-placement="top" title="' . __('buttons.general.crud.edit') . '" class="btn btn-primary"><i class="fas fa-edit"></i></a>';
     }
 
-    /**
-     * @return string
-     */
     public function getChangePasswordButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.change-password', $this) . '" class="dropdown-item">' . __('buttons.backend.access.users.change_password') . '</a> ';
     }
 
-    /**
-     * @return string
-     */
     public function getStatusButtonAttribute(): string
     {
         if ($this->id != auth()->id()) {
@@ -228,9 +181,6 @@ trait UserAttribute
         return '';
     }
 
-    /**
-     * @return string
-     */
     public function getConfirmedButtonAttribute(): string
     {
         if ($this->isConfirmed()) {
@@ -244,9 +194,6 @@ trait UserAttribute
         return '<a href="' . route('admin.auth.user.account.confirm.resend', $this) . '" class="dropdown-item">' . __('buttons.backend.access.users.resend_email') . '</a> ';
     }
 
-    /**
-     * @return string
-     */
     public function getDeleteButtonAttribute(): string
     {
         if ($this->id == auth()->id()) {
@@ -265,25 +212,16 @@ trait UserAttribute
                  class="dropdown-item">' . __('buttons.general.crud.delete') . '</a> ';
     }
 
-    /**
-     * @return string
-     */
     public function getDeletePermanentlyButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.delete-permanently', $this) . '" name="confirm_item" class="btn btn-danger"><i class="fas fa-trash" data-toggle="tooltip" data-placement="top" title="' . __('buttons.backend.access.users.delete_permanently') . '"></i></a> ';
     }
 
-    /**
-     * @return string
-     */
     public function getRestoreButtonAttribute(): string
     {
         return '<a href="' . route('admin.auth.user.restore', $this) . '" name="confirm_item" class="btn btn-info"><i class="fas fa-refresh" data-toggle="tooltip" data-placement="top" title="' . __('buttons.backend.access.users.restore_user') . '"></i></a> ';
     }
 
-    /**
-     * @return string
-     */
     public function getActionButtonsAttribute(): string
     {
         if ($this->trashed()) {
