@@ -324,7 +324,7 @@ abstract class BaseRepository implements RepositoryContract
      */
     public function orderBy($column, $direction = 'asc')
     {
-        $this->orderBys[] = compact('column', 'direction');
+        $this->orderBys[] = ['column' => $column, 'direction' => $direction];
 
         return $this;
     }
@@ -340,7 +340,7 @@ abstract class BaseRepository implements RepositoryContract
      */
     public function where($column, $value, $operator = '=')
     {
-        $this->wheres[] = compact('column', 'value', 'operator');
+        $this->wheres[] = ['column' => $column, 'value' => $value, 'operator' => $operator];
 
         return $this;
     }
@@ -357,7 +357,7 @@ abstract class BaseRepository implements RepositoryContract
     {
         $values = is_array($values) ? $values : [$values];
 
-        $this->whereIns[] = compact('column', 'values');
+        $this->whereIns[] = ['column' => $column, 'values' => $values];
 
         return $this;
     }
@@ -425,7 +425,7 @@ abstract class BaseRepository implements RepositoryContract
             $this->query->orderBy($orders['column'], $orders['direction']);
         }
 
-        if (isset($this->take) and ! is_null($this->take)) {
+        if ($this->take !== null && ! is_null($this->take)) {
             $this->query->take($this->take);
         }
 

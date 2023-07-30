@@ -4317,7 +4317,7 @@ trait UserMethod
             return false;
         }
 
-        if (!strlen($social_avatar->avatar)) {
+        if ((string) $social_avatar->avatar === '') {
             return false;
         }
 

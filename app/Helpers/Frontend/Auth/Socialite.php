@@ -43,7 +43,7 @@ class Socialite
             $socialite_enable[] = "<a href='" . route('frontend.auth.social.login', 'twitter') . "' class='btn btn-sm btn-outline-info m-1'><i class='fab fa-twitter'></i>  " . __('labels.frontend.auth.login_with', ['social_media' => 'Twitter']) . '</a>';
         }
 
-        if ($count = count($socialite_enable)) {
+        if (($count = count($socialite_enable)) !== 0) {
             $socialite_links .= '<hr />';
         }
 

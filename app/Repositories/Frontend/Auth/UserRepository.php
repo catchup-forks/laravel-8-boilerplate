@@ -146,48 +146,39 @@ class UserRepository extends BaseRepository
         // Upload profile image if necessary
         if ($image) {
             $user->avatar_location = $image->store('/avatars', 'public');
-        } else {
-            // No image being passed
-            if ($input['avatar_type'] == 'storage') {
-                // If there is no existing image
-                if (! strlen(auth()->user()->avatar_location)) {
-                    throw new GeneralException('You must supply a profile image.');
-                }
-            } else {
-                // If there is a current image, and they are not using it anymore, get rid of it
-                if (strlen(auth()->user()->avatar_location)) {
-                    Storage::disk('public')->delete(auth()->user()->avatar_location);
-                }
-
-                $user->avatar_location = null;
+        } elseif ($input['avatar_type'] == 'storage') {
+            // If there is no existing image
+            if ((string) auth()->user()->avatar_location === '') {
+                throw new GeneralException('You must supply a profile image.');
             }
+        } else {
+            // If there is a current image, and they are not using it anymore, get rid of it
+            if (strlen(auth()->user()->avatar_location) !== 0) {
+                Storage::disk('public')->delete(auth()->user()->avatar_location);
+            }
+
+            $user->avatar_location = null;
         }
 
-        if ($user->canChangeEmail()) {
-            //Address is not current address so they need to reconfirm
-            if ($user->email != $input['email']) {
-                //Emails have to be unique
-                if ($this->getByColumn($input['email'], 'email') !== null) {
-                    throw new GeneralException(__('exceptions.frontend.auth.email_taken'));
-                }
-
-                // Force the user to re-verify his email address if config is set
-                if (config('access.users.confirm_email')) {
-                    $user->confirmation_code = md5(uniqid(mt_rand(), true));
-                    $user->confirmed = 0;
-                    $user->notify(new UserNeedsConfirmation($user->confirmation_code));
-                }
-
-                $user->email = $input['email'];
-                $updated = $user->save();
-
-                // Send the new confirmation e-mail
-
-                return [
-                    'success'       => $updated,
-                    'email_changed' => true,
-                ];
+        //Address is not current address so they need to reconfirm
+        if ($user->canChangeEmail() && $user->email != $input['email']) {
+            //Emails have to be unique
+            if ($this->getByColumn($input['email'], 'email') !== null) {
+                throw new GeneralException(__('exceptions.frontend.auth.email_taken'));
             }
+            // Force the user to re-verify his email address if config is set
+            if (config('access.users.confirm_email')) {
+                $user->confirmation_code = md5(uniqid(mt_rand(), true));
+                $user->confirmed = 0;
+                $user->notify(new UserNeedsConfirmation($user->confirmation_code));
+            }
+            $user->email = $input['email'];
+            $updated = $user->save();
+            // Send the new confirmation e-mail
+            return [
+                'success'       => $updated,
+                'email_changed' => true,
+            ];
         }
 
         return $user->save();

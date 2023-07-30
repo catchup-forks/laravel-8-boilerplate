@@ -33,7 +33,7 @@ class HtmlHelper
     {
         $defaults = ['media' => 'all', 'type' => 'text/css', 'rel' => 'stylesheet'];
 
-        $attributes = $attributes + $defaults;
+        $attributes += $defaults;
 
         $attributes['href'] = $this->url->asset($url, $secure);
 

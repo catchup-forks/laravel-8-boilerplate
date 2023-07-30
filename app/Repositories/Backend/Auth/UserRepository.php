@@ -114,7 +114,7 @@ class UserRepository extends BaseRepository
 
             if ($user) {
                 // User must have at least one role
-                if (! count($data['roles'])) {
+                if (count($data['roles']) === 0) {
                     throw new GeneralException(__('exceptions.backend.access.users.role_needed_create'));
                 }
 
@@ -331,11 +331,9 @@ class UserRepository extends BaseRepository
     protected function checkUserByEmail(User $user, $email): void
     {
         //Figure out if email is not the same
-        if ($user->email != $email) {
-            //Check to see if email exists
-            if ($this->model->where('email', '=', $email)->first()) {
-                throw new GeneralException(trans('exceptions.backend.access.users.email_error'));
-            }
+        //Check to see if email exists
+        if ($user->email != $email && $this->model->where('email', '=', $email)->first()) {
+            throw new GeneralException(trans('exceptions.backend.access.users.email_error'));
         }
     }
 }

@@ -59,7 +59,7 @@ trait UserAttribute
     {
         $roles = $this->getRoleNames()->toArray();
 
-        if (\count($roles)) {
+        if (\count($roles) > 0) {
             return implode(', ', array_map(static function ($item) : string {
                 return ucwords($item);
             }, $roles));
@@ -72,7 +72,7 @@ trait UserAttribute
     {
         $permissions = $this->getDirectPermissions()->toArray();
 
-        if (\count($permissions)) {
+        if (\count($permissions) > 0) {
             return implode(', ', array_map(static function ($item) : string {
                 return ucwords($item['name']);
             }, $permissions));
@@ -110,7 +110,7 @@ trait UserAttribute
     public function getLoginAsButtonAttribute(): string
     {
         // If the admin is currently NOT spoofing a user
-        if (!(! session()->has('admin_user_id') || ! session()->has('temp_user_id'))) {
+        if (session()->has('admin_user_id') && session()->has('temp_user_id')) {
             return '';
         }
 
