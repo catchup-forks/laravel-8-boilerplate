@@ -14,15 +14,14 @@ class UserPermanentlyDeleted
     use SerializesModels;
 
     /**
-     * @var
-     */
-    public $user;
-
-    /**
      * @param $user
      */
-    public function __construct($user)
+    public function __construct(
+        /**
+         * @var
+         */
+        public $user
+    )
     {
-        $this->user = $user;
     }
 }

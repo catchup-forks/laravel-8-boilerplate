@@ -45,7 +45,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <div class="checkbox">
-                                        {{ html()->label(html()->checkbox('remember', true, 1) . ' ' . __('labels.frontend.auth.remember_me'))->for('remember') }}
+                                        {{ html()->label(html()->checkbox('remember', false, 0) . ' ' . __('labels.frontend.auth.remember_me'))->for('remember') }}
                                     </div>
                                 </div><!--form-group-->
                             </div><!--col-->

@@ -13,18 +13,17 @@ use Illuminate\Support\HtmlString;
 class HtmlHelper
 {
     /**
-     * The URL generator instance.
-     */
-    protected ?UrlGenerator $url;
-
-    /**
      * HtmlHelper constructor.
      *
      * @param UrlGenerator|null $url
      */
-    public function __construct(UrlGenerator $url = null)
+    public function __construct(
+        /**
+         * The URL generator instance.
+         */
+        protected ?UrlGenerator $url = null
+    )
     {
-        $this->url = $url;
     }
 
     /**
@@ -103,7 +102,7 @@ class HtmlHelper
             }
         }
 
-        return count($html) > 0 ? ' ' . implode(' ', $html) : '';
+        return $html !== [] ? ' ' . implode(' ', $html) : '';
     }
 
     /**

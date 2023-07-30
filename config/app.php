@@ -225,7 +225,7 @@ return [
 
         // Application Service Providers...
         AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
+        //App\Providers\AuthServiceProvider::class,
         BladeServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         ComposerServiceProvider::class,

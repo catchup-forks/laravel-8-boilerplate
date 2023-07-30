@@ -16,20 +16,19 @@ use Illuminate\Support\Facades\Hash;
 class UnusedPassword implements Rule
 {
     /**
-     * @var
-     */
-    protected $user;
-
-    /**
      * Create a new rule instance.
      *
      * @param $user
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct(
+        /**
+         * @var
+         */
+        protected $user
+    )
     {
-        $this->user = $user;
     }
 
     /**

@@ -20,18 +20,12 @@ use App\Repositories\Backend\Auth\RoleRepository;
  */
 class RoleController extends Controller
 {
-    protected RoleRepository $roleRepository;
-
-    protected PermissionRepository $permissionRepository;
-
     /**
      * @param RoleRepository       $roleRepository
      * @param PermissionRepository $permissionRepository
      */
-    public function __construct(RoleRepository $roleRepository, PermissionRepository $permissionRepository)
+    public function __construct(protected RoleRepository $roleRepository, protected PermissionRepository $permissionRepository)
     {
-        $this->roleRepository = $roleRepository;
-        $this->permissionRepository = $permissionRepository;
     }
 
     /**

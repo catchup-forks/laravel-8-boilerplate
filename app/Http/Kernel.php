@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace App\Http;
 
 use App\Http\Middleware\TrustProxies;
-use Fruitcake\Cors\HandleCors;
-use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use Illuminate\Foundation\Http\Middleware\ValidatePostSize;
 use App\Http\Middleware\TrimStrings;
 use Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull;
@@ -43,8 +41,6 @@ class Kernel extends HttpKernel
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
         TrustProxies::class,
-        HandleCors::class,
-        PreventRequestsDuringMaintenance::class,
         ValidatePostSize::class,
         TrimStrings::class,
         ConvertEmptyStringsToNull::class,

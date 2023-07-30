@@ -22,16 +22,13 @@ class RegisterController extends Controller
 {
     use RegistersUsers;
 
-    protected UserRepository $userRepository;
-
     /**
      * RegisterController constructor.
      *
      * @param UserRepository $userRepository
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
     }
 
     /**
@@ -79,6 +76,7 @@ class RegisterController extends Controller
                     __('exceptions.frontend.auth.confirmation.created_confirm')
             );
         }
+
         auth()->login($user);
 
         event(new UserRegistered($user));

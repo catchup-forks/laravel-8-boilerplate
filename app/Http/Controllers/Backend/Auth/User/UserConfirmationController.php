@@ -16,14 +16,11 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserConfirmationController extends Controller
 {
-    protected UserRepository $userRepository;
-
     /**
      * @param UserRepository $userRepository
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
     }
 
     /**

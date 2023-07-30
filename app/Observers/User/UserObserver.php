@@ -20,7 +20,7 @@ class UserObserver
      */
     public function created(User $user): void
     {
-        $this->logPasswordHistory($user);
+        //$this->logPasswordHistory($user);
     }
 
     /**
@@ -33,9 +33,9 @@ class UserObserver
     public function updated(User $user): void
     {
         // Only log password history on update if the password actually changed
-        if ($user->isDirty('password')) {
+        /*if ($user->isDirty('password')) {
             $this->logPasswordHistory($user);
-        }
+        }*/
     }
 
     /**
@@ -43,10 +43,10 @@ class UserObserver
      */
     private function logPasswordHistory(User $user): void
     {
-        if (config('access.users.password_history')) {
+        /*if (config('access.users.password_history')) {
             $user->passwordHistories()->create([
                 'password' => $user->password, // Password already hashed & saved so just take from model
             ]);
-        }
+        }*/
     }
 }

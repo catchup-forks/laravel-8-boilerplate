@@ -69,7 +69,7 @@ trait UserAttribute
         $roles = $this->getRoleNames()->toArray();
 
         if (\count($roles)) {
-            return implode(', ', array_map(function ($item): string {
+            return implode(', ', array_map(static function ($item) : string {
                 return ucwords($item);
             }, $roles));
         }
@@ -85,7 +85,7 @@ trait UserAttribute
         $permissions = $this->getDirectPermissions()->toArray();
 
         if (\count($permissions)) {
-            return implode(', ', array_map(function ($item): string {
+            return implode(', ', array_map(static function ($item) : string {
                 return ucwords($item['name']);
             }, $permissions));
         }
@@ -145,6 +145,7 @@ trait UserAttribute
         if (!(! session()->has('admin_user_id') || ! session()->has('temp_user_id'))) {
             return '';
         }
+
         //Won't break, but don't let them "Login As" themselves
         if ($this->id != auth()->id()) {
             return '<a href="' . route(
@@ -164,9 +165,11 @@ trait UserAttribute
         if ($this->id == auth()->id()) {
             return '';
         }
+
         if (config('session.driver') != 'database') {
             return '';
         }
+
         return '<a href="' . route('admin.auth.user.clear-session', $this) . '"
 			 	 data-trans-button-cancel="' . __('buttons.general.cancel') . '"
                  data-trans-button-confirm="' . __('buttons.general.continue') . '"
@@ -233,9 +236,11 @@ trait UserAttribute
         if ($this->isConfirmed()) {
             return '';
         }
+
         if (config('access.users.requires_approval')) {
             return '';
         }
+
         return '<a href="' . route('admin.auth.user.account.confirm.resend', $this) . '" class="dropdown-item">' . __('buttons.backend.access.users.resend_email') . '</a> ';
     }
 
@@ -247,9 +252,11 @@ trait UserAttribute
         if ($this->id == auth()->id()) {
             return '';
         }
+
         if ($this->id == 1) {
             return '';
         }
+
         return '<a href="' . route('admin.auth.user.destroy', $this) . '"
                  data-method="delete"
                  data-trans-button-cancel="' . __('buttons.general.cancel') . '"

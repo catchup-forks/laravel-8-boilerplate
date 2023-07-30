@@ -173,7 +173,7 @@ class UserRepository extends BaseRepository
             //Address is not current address so they need to reconfirm
             if ($user->email != $input['email']) {
                 //Emails have to be unique
-                if ($this->getByColumn($input['email'], 'email')) {
+                if ($this->getByColumn($input['email'], 'email') !== null) {
                     throw new GeneralException(__('exceptions.frontend.auth.email_taken'));
                 }
 
@@ -183,6 +183,7 @@ class UserRepository extends BaseRepository
                     $user->confirmed = 0;
                     $user->notify(new UserNeedsConfirmation($user->confirmation_code));
                 }
+
                 $user->email = $input['email'];
                 $updated = $user->save();
 
@@ -258,7 +259,7 @@ class UserRepository extends BaseRepository
     public function findOrCreateProvider($data, $provider)
     {
         // User email may not provided.
-        $user_email = $data->email ?: "{$data->id}@{$provider}.com";
+        $user_email = $data->email ?: sprintf('%s@%s.com', $data->id, $provider);
 
         // Check to see if there is a user with this email first.
         $user = $this->getByColumn($user_email, 'email');
@@ -268,7 +269,7 @@ class UserRepository extends BaseRepository
          * The true flag indicate that it is a social account
          * Which triggers the script to use some default values in the create method
          */
-        if (! $user) {
+        if ($user === null) {
             // Registration is not enabled
             if (! config('access.registration')) {
                 throw new GeneralException(__('exceptions.frontend.auth.registration_disabled'));

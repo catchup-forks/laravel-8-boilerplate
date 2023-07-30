@@ -58,8 +58,8 @@ if (! function_exists('include_route_files')) {
 
                 $it->next();
             }
-        } catch (Exception $e) {
-            echo $e->getMessage();
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
         }
     }
 }

@@ -14,15 +14,14 @@ class RoleUpdated
     use SerializesModels;
 
     /**
-     * @var
-     */
-    public $role;
-
-    /**
      * @param $role
      */
-    public function __construct($role)
+    public function __construct(
+        /**
+         * @var
+         */
+        public $role
+    )
     {
-        $this->role = $role;
     }
 }

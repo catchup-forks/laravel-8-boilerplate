@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Response;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\JsonResponse;
@@ -23,16 +24,13 @@ class ResetPasswordController extends Controller
 {
     use ResetsPasswords;
 
-    protected UserRepository $userRepository;
-
     /**
      * ChangePasswordController constructor.
      *
      * @param UserRepository $userRepository
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
     }
 
     /**
@@ -55,10 +53,12 @@ class ResetPasswordController extends Controller
             return redirect()->route('frontend.auth.password.email')
                 ->withFlashDanger(__('exceptions.frontend.auth.password.reset_problem'));
         }
+
         if (!app()->make('auth.password.broker')->tokenExists($user, $token)) {
             return redirect()->route('frontend.auth.password.email')
                 ->withFlashDanger(__('exceptions.frontend.auth.password.reset_problem'));
         }
+
         return view('frontend.auth.passwords.reset')
             ->withToken($token)
             ->withEmail($user->email);
@@ -99,7 +99,7 @@ class ResetPasswordController extends Controller
      *
      * @return void
      */
-    protected function resetPassword($user, $password): void
+    protected function resetPassword(Authenticatable $user, $password): void
     {
         $user->password = $password;
 

@@ -12,16 +12,13 @@ use Illuminate\View\View;
  */
 class SidebarComposer
 {
-    protected UserRepository $userRepository;
-
     /**
      * SidebarComposer constructor.
      *
      * @param UserRepository $userRepository
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
     }
 
     /**

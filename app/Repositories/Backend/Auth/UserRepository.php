@@ -164,7 +164,7 @@ class UserRepository extends BaseRepository
             $data['permissions'] = [];
         }
 
-        return DB::transaction(function () use ($user, $data): User {
+        return DB::transaction(static function () use ($user, $data) : User {
             if ($user->update([
                 'first_name' => $data['first_name'],
                 'last_name'  => $data['last_name'],
@@ -178,7 +178,6 @@ class UserRepository extends BaseRepository
 
                 return $user;
             }
-
             throw new GeneralException(__('exceptions.backend.access.users.update_error'));
         });
     }
@@ -218,14 +217,10 @@ class UserRepository extends BaseRepository
 
         $user->active = $status;
 
-        switch ($status) {
-            case 0:
-                event(new UserDeactivated($user));
-                break;
-
-            case 1:
-                event(new UserReactivated($user));
-                break;
+        if ($status == 0) {
+            event(new UserDeactivated($user));
+        } elseif ($status == 1) {
+            event(new UserReactivated($user));
         }
 
         if ($user->save()) {
@@ -315,18 +310,16 @@ class UserRepository extends BaseRepository
             throw new GeneralException(__('exceptions.backend.access.users.delete_first'));
         }
 
-        return DB::transaction(function () use ($user): User {
+        return DB::transaction(static function () use ($user) : User {
             // Delete associated relationships
             $user->passwordHistories()->delete();
             $user->providers()->delete();
             $user->sessions()->delete();
-
             if ($user->forceDelete()) {
                 event(new UserPermanentlyDeleted($user));
 
                 return $user;
             }
-
             throw new GeneralException(__('exceptions.backend.access.users.delete_error'));
         });
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-Breadcrumbs::for('admin.dashboard', function ($trail): void {
+Breadcrumbs::for('admin.dashboard', static function ($trail) : void {
     $trail->push(__('strings.backend.dashboard.title'), route('admin.dashboard'));
 });
 

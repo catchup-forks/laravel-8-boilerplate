@@ -18,23 +18,14 @@ use Laravel\Socialite\Facades\Socialite;
  */
 class SocialLoginController extends Controller
 {
-    protected UserRepository $userRepository;
-
-    /**
-     * @var SocialiteHelper
-     */
-    protected SocialiteHelper $socialiteHelper;
-
     /**
      * SocialLoginController constructor.
      *
      * @param UserRepository  $userRepository
      * @param SocialiteHelper $socialiteHelper
      */
-    public function __construct(UserRepository $userRepository, SocialiteHelper $socialiteHelper)
+    public function __construct(protected UserRepository $userRepository, protected SocialiteHelper $socialiteHelper)
     {
-        $this->userRepository = $userRepository;
-        $this->socialiteHelper = $socialiteHelper;
     }
 
     /**
@@ -67,8 +58,8 @@ class SocialLoginController extends Controller
         // Create the user if this is a new social account or find the one that is already there.
         try {
             $user = $this->userRepository->findOrCreateProvider($this->getProviderUser($provider), $provider);
-        } catch (GeneralException $e) {
-            return redirect()->route(home_route())->withFlashDanger($e->getMessage());
+        } catch (GeneralException $generalException) {
+            return redirect()->route(home_route())->withFlashDanger($generalException->getMessage());
         }
 
         if (is_null($user)) {
@@ -105,9 +96,9 @@ class SocialLoginController extends Controller
     protected function getAuthorizationFirst($provider)
     {
         $socialite = Socialite::driver($provider);
-        $scopes = empty(config("services.{$provider}.scopes")) ? false : config("services.{$provider}.scopes");
-        $with = empty(config("services.{$provider}.with")) ? false : config("services.{$provider}.with");
-        $fields = empty(config("services.{$provider}.fields")) ? false : config("services.{$provider}.fields");
+        $scopes = empty(config(sprintf('services.%s.scopes', $provider))) ? false : config(sprintf('services.%s.scopes', $provider));
+        $with = empty(config(sprintf('services.%s.with', $provider))) ? false : config(sprintf('services.%s.with', $provider));
+        $fields = empty(config(sprintf('services.%s.fields', $provider))) ? false : config(sprintf('services.%s.fields', $provider));
 
         if ($scopes) {
             $socialite->scopes($scopes);

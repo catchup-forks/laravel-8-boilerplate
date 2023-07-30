@@ -97,7 +97,7 @@ abstract class BaseRepository implements RepositoryContract
         $model = app()->make($this->model());
 
         if (! $model instanceof Model) {
-            throw new GeneralException("Class {$this->model()} must be an instance of " . Model::class);
+            throw new GeneralException(sprintf('Class %s must be an instance of ', $this->model()) . Model::class);
         }
 
         return $this->model = $model;

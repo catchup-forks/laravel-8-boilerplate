@@ -32,9 +32,8 @@ class RouteServiceProvider extends ServiceProvider
         // Register route model bindings
 
         // Allow this to select all users regardless of status
-        $this->bind('user', function ($value): ?object {
+        $this->bind('user', static function ($value) : ?object {
             $user = new User();
-
             return User::withTrashed()->where($user->getRouteKeyName(), $value)->first();
         });
 

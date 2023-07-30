@@ -15,14 +15,12 @@ Route::post('contact/send', 'ContactController@send')->name('contact.send');
  * All route names are prefixed with 'frontend.'
  * These routes can not be hit if the password is expired
  */
-Route::group(['middleware' => ['auth', 'password_expires']], function (): void {
-    Route::group(['namespace' => 'User', 'as' => 'user.'], function (): void {
+Route::group(['middleware' => ['auth', 'password_expires']], static function () : void {
+    Route::group(['namespace' => 'User', 'as' => 'user.'], static function () : void {
         // User Dashboard Specific
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-
         // User Account Specific
         Route::get('account', 'AccountController@index')->name('account');
-
         // User Profile Specific
         Route::patch('profile/update', 'ProfileController@update')->name('profile.update');
     });

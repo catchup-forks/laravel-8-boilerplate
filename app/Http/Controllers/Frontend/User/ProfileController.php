@@ -14,16 +14,13 @@ use App\Repositories\Frontend\Auth\UserRepository;
  */
 class ProfileController extends Controller
 {
-    protected UserRepository $userRepository;
-
     /**
      * ProfileController constructor.
      *
      * @param UserRepository $userRepository
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
     }
 
     /**

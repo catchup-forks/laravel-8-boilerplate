@@ -36,25 +36,3222 @@ trait UserMethod
      */
     public function getPicture($size = false)
     {
-        switch ($this->avatar_type) {
-            case 'gravatar':
-                if (! $size) {
-                    $size = config('gravatar.default.size');
-                }
-
-                return gravatar()->get($this->email, ['size' => $size]);
-
-            case 'storage':
-                return url('storage/' . $this->avatar_location);
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
         }
-
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'gravatar') {
+            if (! $size) {
+                $size = config('gravatar.default.size');
+            }
+            return gravatar()->get($this->email, ['size' => $size]);
+        }
+        if ($this->avatar_type == 'storage') {
+            return url('storage/' . $this->avatar_location);
+        }
         $social_avatar = $this->providers()->where('provider', $this->avatar_type)->first();
         if (!$social_avatar) {
             return false;
         }
+
         if (!strlen($social_avatar->avatar)) {
             return false;
         }
+
         return $social_avatar->avatar;
     }
 

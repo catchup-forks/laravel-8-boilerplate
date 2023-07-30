@@ -14,7 +14,7 @@ Route::get('lang/{lang}', 'LanguageController');
  * Frontend Routes
  * Namespaces indicate folder structure
  */
-Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function (): void {
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], static function () : void {
     include_route_files(__DIR__ . '/frontend/');
 });
 
@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function (): void
  * Backend Routes
  * Namespaces indicate folder structure
  */
-Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function (): void {
+Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], static function () : void {
     /*
      * These routes need view-backend permission
      * (good if you want to allow more than one group in the backend,

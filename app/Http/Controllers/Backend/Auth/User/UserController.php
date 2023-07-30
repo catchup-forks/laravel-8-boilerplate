@@ -24,16 +24,13 @@ use App\Repositories\Backend\Auth\UserRepository;
  */
 class UserController extends Controller
 {
-    protected UserRepository $userRepository;
-
     /**
      * UserController constructor.
      *
      * @param UserRepository $userRepository
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
     }
 
     /**

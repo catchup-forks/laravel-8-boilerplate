@@ -73,9 +73,11 @@ class LoginController extends Controller
             if ($user->isPending()) {
                 throw new GeneralException(__('exceptions.frontend.auth.confirmation.pending'));
             }
+
             // Otherwise see if they want to resent the confirmation e-mail
             throw new GeneralException(__('exceptions.frontend.auth.confirmation.resend', ['url' => route('frontend.auth.account.confirm.resend', $user->{$user->getUuidName()})]));
         }
+
         if (! $user->isActive()) {
             auth()->logout();
             throw new GeneralException(__('exceptions.frontend.auth.deactivated'));
@@ -124,7 +126,7 @@ class LoginController extends Controller
     public function logoutAs()
     {
         // If for some reason route is getting hit without someone already logged in
-        if (! auth()->user()) {
+        if (auth()->user() === null) {
             return redirect()->route('frontend.auth.login');
         }
 
@@ -141,6 +143,7 @@ class LoginController extends Controller
             // Redirect to backend user page
             return redirect()->route('admin.auth.user.index');
         }
+
         app()->make(Auth::class)->flushTempSession();
 
         // Otherwise logout and redirect to login

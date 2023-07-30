@@ -1,7 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace Database\Seeders;
 
+use Database\Seeders\Auth\PermissionRoleTableSeeder;
+use Database\Seeders\Auth\UserRoleTableSeeder;
+use Database\Seeders\Auth\UserTableSeeder;
+use Database\Seeders\Traits\DisableForeignKeys;
+use Database\Seeders\Traits\TruncateTable;
 use Illuminate\Database\Seeder;
 
 /**
@@ -12,11 +17,6 @@ class AuthTableSeeder extends Seeder
     use DisableForeignKeys;
     use TruncateTable;
 
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run(): void
     {
         $this->disableForeignKeys();
@@ -31,9 +31,7 @@ class AuthTableSeeder extends Seeder
             config('permission.table_names.permissions'),
             config('permission.table_names.roles'),
             config('access.table_names.users'),
-            config('access.table_names.password_histories'),
             'password_resets',
-            'social_accounts',
         ]);
 
         $this->call(UserTableSeeder::class);

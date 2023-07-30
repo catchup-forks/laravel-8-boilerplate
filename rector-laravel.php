@@ -57,34 +57,31 @@ return static function (RectorConfig $rectorConfig): void {
 
     // register rules to add return type when known
     $rectorConfig->rules([
-        AddParamTypeDeclarationRector::class,
-        AddParamTypeFromPropertyTypeRector::class,
-
-        AddReturnTypeDeclarationBasedOnParentClassMethodRector::class,
-
-        AddVoidReturnTypeWhereNoReturnRector::class,
-
-        BoolReturnTypeFromStrictScalarReturnsRector::class,
+        //AddParamTypeDeclarationRector::class,
+        //AddParamTypeFromPropertyTypeRector::class,
+        //AddReturnTypeDeclarationBasedOnParentClassMethodRector::class,
+        //AddVoidReturnTypeWhereNoReturnRector::class,
+        //BoolReturnTypeFromStrictScalarReturnsRector::class,
 
         //CallOnAppArrayAccessToStandaloneAssignRector::class,
 
-        ClassPropertyAssignToConstructorPromotionRector::class,
+        //ClassPropertyAssignToConstructorPromotionRector::class,
 
         //JsonThrowOnErrorRector::class,
 //
-        ReturnTypeFromReturnDirectArrayRector::class,
-        ReturnTypeFromReturnNewRector::class,
-        ReturnTypeFromStrictBoolReturnExprRector::class,
-        ReturnTypeFromStrictNativeCallRector::class,
-        ReturnTypeFromStrictScalarReturnExprRector::class,
+        //ReturnTypeFromReturnDirectArrayRector::class,
+        //ReturnTypeFromReturnNewRector::class,
+        //ReturnTypeFromStrictBoolReturnExprRector::class,
+        //ReturnTypeFromStrictNativeCallRector::class,
+        //ReturnTypeFromStrictScalarReturnExprRector::class,
 //
-        SimplifyConditionsRector::class,
+        //SimplifyConditionsRector::class,
         //SimplifyForeachToArrayFilterRector::class,
-        SimplifyForeachToCoalescingRector::class,
-        SimplifyIfElseToTernaryRector::class,
-        SimplifyUselessVariableRector::class,
-        StringClassNameToClassConstantRector::class,
-        ThrowWithPreviousExceptionRector::class,
+        //SimplifyForeachToCoalescingRector::class,
+        //SimplifyIfElseToTernaryRector::class,
+        //SimplifyUselessVariableRector::class,
+        //StringClassNameToClassConstantRector::class,
+        //ThrowWithPreviousExceptionRector::class,
     ]);
 
     /*$rectorConfig->ruleWithConfiguration(RouteActionCallableRector::class, [
@@ -103,7 +100,7 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::EARLY_RETURN,
         ////SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION,
         LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
-        //SetList::CODING_STYLE,
+        SetList::CODING_STYLE,
         //SetList::DEAD_CODE,
         //SetList::CODE_QUALITY,
         //LaravelSetList::LARAVEL_CODE_QUALITY,
