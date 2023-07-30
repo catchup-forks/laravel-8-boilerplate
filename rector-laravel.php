@@ -102,8 +102,8 @@ return static function (RectorConfig $rectorConfig): void {
         //LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
         //SetList::CODING_STYLE,
         //SetList::DEAD_CODE,
-        SetList::CODE_QUALITY,
-        LaravelSetList::LARAVEL_CODE_QUALITY,
-        //LaravelLevelSetList::UP_TO_LARAVEL_80,
+        //SetList::CODE_QUALITY,
+        //LaravelSetList::LARAVEL_CODE_QUALITY,
+        LaravelLevelSetList::UP_TO_LARAVEL_80,
     ]);
 };

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * Global Routes
  * Routes that are used between both frontend and backend.
@@ -9,6 +7,10 @@ declare(strict_types=1);
 
 // Switch between the included languages
 Route::get('lang/{lang}', 'LanguageController');
+
+Route::group(['namespace' => 'Kwd', 'as' => 'kwd.'], static function () : void {
+    include_route_files(__DIR__ . '/kwd/');
+});
 
 /*
  * Frontend Routes
